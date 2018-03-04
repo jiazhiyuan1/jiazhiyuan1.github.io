@@ -20,18 +20,18 @@
     
     
     <meta name="keywords" content="java学习基础">
-    <meta name="description" content="string类##用法： ##常见用法 String s=&amp;quot;Hello java!&amp;quot;; String s2=new string(&amp;quot;welcome to String!&amp;quot;); char c[]={&amp;apos;s&amp;apos;,&amp;apos;u&amp;apos;}; String s3=new string(c,4,4); 例题 public static void m">
+    <meta name="description" content="string类常见用法 String s=&amp;quot;Hello java!&amp;quot;; String s2=new string(&amp;quot;welcome to String!&amp;quot;); char c[]={&amp;apos;s&amp;apos;,&amp;apos;u&amp;apos;}; String s3=new string(c,4,4); public char charAt(int idex)//返">
 <meta name="keywords" content="java学习基础">
 <meta property="og:type" content="article">
 <meta property="og:title" content="java string">
 <meta property="og:url" content="http://yoursite.com/2018/03/04/java-string/index.html">
 <meta property="og:site_name">
-<meta property="og:description" content="string类##用法： ##常见用法 String s=&amp;quot;Hello java!&amp;quot;; String s2=new string(&amp;quot;welcome to String!&amp;quot;); char c[]={&amp;apos;s&amp;apos;,&amp;apos;u&amp;apos;}; String s3=new string(c,4,4); 例题 public static void m">
+<meta property="og:description" content="string类常见用法 String s=&amp;quot;Hello java!&amp;quot;; String s2=new string(&amp;quot;welcome to String!&amp;quot;); char c[]={&amp;apos;s&amp;apos;,&amp;apos;u&amp;apos;}; String s3=new string(c,4,4); public char charAt(int idex)//返">
 <meta property="og:locale" content="zh-CN">
-<meta property="og:updated_time" content="2018-03-04T10:53:00.008Z">
+<meta property="og:updated_time" content="2018-03-04T11:07:21.341Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="java string">
-<meta name="twitter:description" content="string类##用法： ##常见用法 String s=&amp;quot;Hello java!&amp;quot;; String s2=new string(&amp;quot;welcome to String!&amp;quot;); char c[]={&amp;apos;s&amp;apos;,&amp;apos;u&amp;apos;}; String s3=new string(c,4,4); 例题 public static void m">
+<meta name="twitter:description" content="string类常见用法 String s=&amp;quot;Hello java!&amp;quot;; String s2=new string(&amp;quot;welcome to String!&amp;quot;); char c[]={&amp;apos;s&amp;apos;,&amp;apos;u&amp;apos;}; String s3=new string(c,4,4); public char charAt(int idex)//返">
     
     <link rel="shortcut icon" href="/favicon.ico">
     <link rel="stylesheet" href="//unpkg.com/hexo-theme-material-indigo@latest/css/style.css">
@@ -171,7 +171,7 @@
     <aside class="post-widget">
         <nav class="post-toc-wrap post-toc-shrink" id="post-toc">
             <h4>TOC</h4>
-            <ol class="post-toc"><li class="post-toc-item post-toc-level-1"><a class="post-toc-link" href="#string类"><span class="post-toc-number">1.</span> <span class="post-toc-text">string类</span></a></li></ol>
+            <ol class="post-toc"><li class="post-toc-item post-toc-level-1"><a class="post-toc-link" href="#string类"><span class="post-toc-number">1.</span> <span class="post-toc-text">string类</span></a></li><li class="post-toc-item post-toc-level-1"><a class="post-toc-link" href="#StringBuffer类"><span class="post-toc-number">2.</span> <span class="post-toc-text">StringBuffer类</span></a></li></ol>
         </nav>
     </aside>
 
@@ -197,11 +197,14 @@
 
         </div>
         <div class="post-content" id="post-content" itemprop="postContent">
-            <h1 id="string类"><a href="#string类" class="headerlink" title="string类"></a>string类</h1><p>##用法： ##<br><strong>常见用法</strong></p>
+            <h1 id="string类"><a href="#string类" class="headerlink" title="string类"></a>string类</h1><p><strong>常见用法</strong></p>
 <pre><code>String s=&quot;Hello java!&quot;;
 String s2=new string(&quot;welcome to String!&quot;);
 char c[]={&apos;s&apos;,&apos;u&apos;};
 String s3=new string(c,4,4);
+public char charAt(int idex)//返回某处引用的值
+public int length()//返回此字符串的长度
+public int indexOf（String str）//返回字符串第一次出现的索引
 </code></pre><p><strong>例题</strong></p>
 <pre><code>public static void main (Str ing[] args)
  {
@@ -214,7 +217,8 @@ S2 = new String(&quot;hello&quot;)
 System.out.println (s1== s2);
 System.out.println(sl.equals (s2));
 }
-</code></pre><p>输出结果：<br>true<br>false<br>true<br><strong>分析</strong></p>
+</code></pre><p>输出结果：<br>true<br>false<br>true</p>
+<h1 id="StringBuffer类"><a href="#StringBuffer类" class="headerlink" title="StringBuffer类"></a>StringBuffer类</h1><p><strong>常见用法</strong></p>
 
         </div>
 
@@ -223,7 +227,7 @@ System.out.println(sl.equals (s2));
     <div class="content">
         
 <span class="post-time">
-    最后更新时间：<time datetime="2018-03-04T10:53:00.008Z" itemprop="dateUpdated">2018-03-04 18:53:00</time>
+    最后更新时间：<time datetime="2018-03-04T11:07:21.341Z" itemprop="dateUpdated">2018-03-04 19:07:21</time>
 </span><br>
 
 
