@@ -28,7 +28,7 @@
 <meta property="og:site_name">
 <meta property="og:description" content="string类常见用法 String s=&amp;quot;Hello java!&amp;quot;; String s2=new string(&amp;quot;welcome to String!&amp;quot;); char c[]={&amp;apos;s&amp;apos;,&amp;apos;u&amp;apos;}; String s3=new string(c,4,4); public char charAt(int idex)//返">
 <meta property="og:locale" content="zh-CN">
-<meta property="og:updated_time" content="2018-03-04T11:07:21.341Z">
+<meta property="og:updated_time" content="2018-03-04T13:01:05.587Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="java string">
 <meta name="twitter:description" content="string类常见用法 String s=&amp;quot;Hello java!&amp;quot;; String s2=new string(&amp;quot;welcome to String!&amp;quot;); char c[]={&amp;apos;s&amp;apos;,&amp;apos;u&amp;apos;}; String s3=new string(c,4,4); public char charAt(int idex)//返">
@@ -217,7 +217,52 @@ S2 = new String(&quot;hello&quot;)
 System.out.println (s1== s2);
 System.out.println(sl.equals (s2));
 }
-</code></pre><p>输出结果：<br>true<br>false<br>true</p>
+</code></pre><p>输出结果：<br>true<br>false<br>true<br><strong>常见用法</strong></p>
+<pre><code>public char charAt(int idex)//返回某处引用的值
+public int length()//返回此字符串的长度
+public int indexOf（String str）//返回字符串第一次出现的索引
+</code></pre><p><strong>例题</strong></p>
+<pre><code>public static void main(String[] args)
+{
+    // TODO Auto-generated method stub
+    String s1=&quot;sun java&quot;,s2=&quot;SUN JAVA&quot;;
+    System.out.println(s1.charAt(1));
+    System.out.println(s2.length());
+    System.out.println(s1.indexOf(&quot;java&quot;));
+    System.out.println(s1.indexOf(&quot;Java&quot;));
+    System.out.println(s1.equals(s2));
+
+    System.out.println(s1.equalsIgnoreCase(s2));
+    String s=&quot;He is a student.He is studying java now&quot;;
+    String sr=s.replace(&quot;He&quot;, &quot;She&quot;);
+    System.out.println(sr);
+}
+</code></pre><p>输出结果：<br>u<br>8<br>4<br>-1<br>false<br>true<br>She is a student.She is studying java now<br><strong>常见用法</strong></p>
+<pre><code>public boolean startWith(String prefix)//是否开始于一个字符串
+public boolean endwith(String suffix)//是否以一个字符串结尾
+public String toUpperCase()   //转换成大写
+public String toLowerCase() //转成小写
+public String substring(int benginindex)//开始于begin位置的字符串
+public String substring(int beginindex,int endindex)//开始于bedgin的位置结束于end的位置
+public String trim（）//去掉两端字符串
+</code></pre><p><strong>例题</strong></p>
+<pre><code>public static void main(String[] args) {
+    // TODO Auto-generated method stub
+    String s=&quot;Welcome to java world!&quot;;
+    String s1=&quot; sun java &quot;;
+    System.out.println(s.startsWith(&quot;Welcome&quot;));
+    System.out.println(s.endsWith(&quot;world!&quot;));
+    String sL=s.toLowerCase();
+    String sU=s.toUpperCase();
+    System.out.println(sL);
+    System.out.println(sU);
+    String subS=s.substring(11);
+    System.out.println(subS);
+    String sp=s1.trim();// 去掉两端
+    System.out.println(sp);
+
+}
+</code></pre><p>运行结果：<br>WELCOME TO JAVA WORLD!<br>java world!<br>sun java</p>
 <h1 id="StringBuffer类"><a href="#StringBuffer类" class="headerlink" title="StringBuffer类"></a>StringBuffer类</h1><p><strong>常见用法</strong></p>
 
         </div>
@@ -227,7 +272,7 @@ System.out.println(sl.equals (s2));
     <div class="content">
         
 <span class="post-time">
-    最后更新时间：<time datetime="2018-03-04T11:07:21.341Z" itemprop="dateUpdated">2018-03-04 19:07:21</time>
+    最后更新时间：<time datetime="2018-03-04T13:01:05.587Z" itemprop="dateUpdated">2018-03-04 21:01:05</time>
 </span><br>
 
 
@@ -313,9 +358,9 @@ System.out.println(sl.equals (s2));
 
   
     <div class="waves-block waves-effect next">
-      <a href="/2018/02/18/eclipse/" id="post-next" class="post-nav-link">
+      <a href="/2018/03/04/java多态/" id="post-next" class="post-nav-link">
         <div class="tips">Next <i class="icon icon-angle-right icon-lg icon-pl"></i></div>
-        <h4 class="title">eclipse快捷键</h4>
+        <h4 class="title">java多态</h4>
       </a>
     </div>
   
