@@ -13,24 +13,25 @@
     
     
     
-    <title>模板 | </title>
+    <title>二维数组查找 | </title>
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
     
     <meta name="theme-color" content="#3F51B5">
     
     
-    <meta name="keywords" content="">
-    <meta name="description" content="#eclipse 快捷键# 快速修复Ctrl+l 快捷删除行Ctrl+D 迅速换行shift+enter 快速运行项目Ctrl+11 快速移动行Ctrl+Ault+上/下 放大工作区Ctrl+M 补全代码Alrt+/ 注释Ctrl+/">
+    <meta name="keywords" content="算法">
+    <meta name="description" content="#题目描述#在一个二维数组中，每一行都按照从左到右递增的顺序排序，每一列都按照从上到下递增的顺序排序。请完成一个函数，输入这样的一个二维数组和一个整数，判断数组中是否含有该整数。  先从左下开始查找 变量在每次判断时候开始加减  class Solution{ public:     bool Find(vector&amp;lt;vector&amp;lt;int&amp;gt;&amp;gt;array,target){">
+<meta name="keywords" content="算法">
 <meta property="og:type" content="article">
-<meta property="og:title" content="模板">
-<meta property="og:url" content="http://yoursite.com/2018/02/10/软件工程/index.html">
+<meta property="og:title" content="二维数组查找">
+<meta property="og:url" content="http://yoursite.com/2018/03/26/二维数组查找/index.html">
 <meta property="og:site_name">
-<meta property="og:description" content="#eclipse 快捷键# 快速修复Ctrl+l 快捷删除行Ctrl+D 迅速换行shift+enter 快速运行项目Ctrl+11 快速移动行Ctrl+Ault+上/下 放大工作区Ctrl+M 补全代码Alrt+/ 注释Ctrl+/">
+<meta property="og:description" content="#题目描述#在一个二维数组中，每一行都按照从左到右递增的顺序排序，每一列都按照从上到下递增的顺序排序。请完成一个函数，输入这样的一个二维数组和一个整数，判断数组中是否含有该整数。  先从左下开始查找 变量在每次判断时候开始加减  class Solution{ public:     bool Find(vector&amp;lt;vector&amp;lt;int&amp;gt;&amp;gt;array,target){">
 <meta property="og:locale" content="zh-CN">
-<meta property="og:updated_time" content="2018-03-04T05:20:43.139Z">
+<meta property="og:updated_time" content="2018-03-26T06:57:25.239Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="模板">
-<meta name="twitter:description" content="#eclipse 快捷键# 快速修复Ctrl+l 快捷删除行Ctrl+D 迅速换行shift+enter 快速运行项目Ctrl+11 快速移动行Ctrl+Ault+上/下 放大工作区Ctrl+M 补全代码Alrt+/ 注释Ctrl+/">
+<meta name="twitter:title" content="二维数组查找">
+<meta name="twitter:description" content="#题目描述#在一个二维数组中，每一行都按照从左到右递增的顺序排序，每一列都按照从上到下递增的顺序排序。请完成一个函数，输入这样的一个二维数组和一个整数，判断数组中是否含有该整数。  先从左下开始查找 变量在每次判断时候开始加减  class Solution{ public:     bool Find(vector&amp;lt;vector&amp;lt;int&amp;gt;&amp;gt;array,target){">
     
     <link rel="shortcut icon" href="/favicon.ico">
     <link rel="stylesheet" href="//unpkg.com/hexo-theme-material-indigo@latest/css/style.css">
@@ -123,7 +124,7 @@
         <a href="javascript:;" class="header-icon waves-effect waves-circle waves-light on" id="menu-toggle">
           <i class="icon icon-lg icon-navicon"></i>
         </a>
-        <div class="flex-col header-title ellipsis">模板</div>
+        <div class="flex-col header-title ellipsis">二维数组查找</div>
         
         <div class="search-wrap" id="search-wrap">
             <a href="javascript:;" class="header-icon waves-effect waves-circle waves-light" id="back">
@@ -145,15 +146,15 @@
 <header class="content-header post-header">
 
     <div class="container fade-scale">
-        <h1 class="title">模板</h1>
+        <h1 class="title">二维数组查找</h1>
         <h5 class="subtitle">
             
-                <time datetime="2018-02-10T08:22:26.000Z" itemprop="datePublished" class="page-time">
-  2018-02-10
+                <time datetime="2018-03-26T06:15:47.000Z" itemprop="datePublished" class="page-time">
+  2018-03-26
 </time>
 
 
-	<ul class="article-category-list"><li class="article-category-list-item"><a class="article-category-list-link" href="/categories/blog/">blog</a></li></ul>
+	<ul class="article-category-list"><li class="article-category-list-item"><a class="article-category-list-link" href="/categories/牛客/">牛客</a></li></ul>
 
             
         </h5>
@@ -167,24 +168,17 @@
 
 <div class="container body-wrap">
     
-    <aside class="post-widget">
-        <nav class="post-toc-wrap post-toc-shrink" id="post-toc">
-            <h4>TOC</h4>
-            <ol class="post-toc"><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#快速修复"><span class="post-toc-number">1.</span> <span class="post-toc-text">快速修复</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#快捷删除行"><span class="post-toc-number">2.</span> <span class="post-toc-text">快捷删除行</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#迅速换行"><span class="post-toc-number">3.</span> <span class="post-toc-text">迅速换行</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#快速运行项目"><span class="post-toc-number">4.</span> <span class="post-toc-text">快速运行项目</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#快速移动行"><span class="post-toc-number">5.</span> <span class="post-toc-text">快速移动行</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#放大工作区"><span class="post-toc-number">6.</span> <span class="post-toc-text">放大工作区</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#补全代码"><span class="post-toc-number">7.</span> <span class="post-toc-text">补全代码</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#注释"><span class="post-toc-number">8.</span> <span class="post-toc-text">注释</span></a></li></ol>
-        </nav>
-    </aside>
 
-
-<article id="post-软件工程"
+<article id="post-二维数组查找"
   class="post-article article-type-post fade" itemprop="blogPost">
 
     <div class="post-card">
-        <h1 class="post-card-title">模板</h1>
+        <h1 class="post-card-title">二维数组查找</h1>
         <div class="post-meta">
-            <time class="post-time" title="2018-02-10 16:22:26" datetime="2018-02-10T08:22:26.000Z"  itemprop="datePublished">2018-02-10</time>
+            <time class="post-time" title="2018-03-26 14:15:47" datetime="2018-03-26T06:15:47.000Z"  itemprop="datePublished">2018-03-26</time>
 
             
-	<ul class="article-category-list"><li class="article-category-list-item"><a class="article-category-list-link" href="/categories/blog/">blog</a></li></ul>
+	<ul class="article-category-list"><li class="article-category-list-item"><a class="article-category-list-link" href="/categories/牛客/">牛客</a></li></ul>
 
 
 
@@ -196,15 +190,38 @@
 
         </div>
         <div class="post-content" id="post-content" itemprop="postContent">
-            <p>#eclipse 快捷键#</p>
-<h2 id="快速修复"><a href="#快速修复" class="headerlink" title="快速修复"></a>快速修复</h2><pre><code>Ctrl+l
-</code></pre><h2 id="快捷删除行"><a href="#快捷删除行" class="headerlink" title="快捷删除行"></a>快捷删除行</h2><pre><code>Ctrl+D
-</code></pre><h2 id="迅速换行"><a href="#迅速换行" class="headerlink" title="迅速换行"></a>迅速换行</h2><pre><code>shift+enter
-</code></pre><h2 id="快速运行项目"><a href="#快速运行项目" class="headerlink" title="快速运行项目"></a>快速运行项目</h2><pre><code>Ctrl+11
-</code></pre><h2 id="快速移动行"><a href="#快速移动行" class="headerlink" title="快速移动行"></a>快速移动行</h2><pre><code>Ctrl+Ault+上/下
-</code></pre><h2 id="放大工作区"><a href="#放大工作区" class="headerlink" title="放大工作区"></a>放大工作区</h2><pre><code>Ctrl+M
-</code></pre><h2 id="补全代码"><a href="#补全代码" class="headerlink" title="补全代码"></a>补全代码</h2><pre><code>Alrt+/
-</code></pre><h2 id="注释"><a href="#注释" class="headerlink" title="注释"></a>注释</h2><pre><code>Ctrl+/
+            <p>#题目描述#<br>在一个二维数组中，每一行都按照从左到右递增的顺序排序，每一列都按照从上到下递增的顺序排序。请完成一个函数，输入这样的一个二维数组和一个整数，判断数组中是否含有该整数。</p>
+<ul>
+<li>先从左下开始查找</li>
+<li>变量在每次判断时候开始加减</li>
+</ul>
+<pre><code>class Solution{
+public:
+    bool Find(vector&lt;vector&lt;int&gt;&gt;array,target){
+    int rowCount=array.size();
+    int colCount=array[0].size();
+    int i,j;
+    i=rowCount-1；
+    for(j=0;i&gt;=0&amp;&amp;j&lt;colCount;)
+    {
+        if(target==array[i][j])
+            return true;
+        if(target&lt;array[i][j])
+        {
+            i--;
+            continue;
+        }
+        if(target&gt;array[i][j])
+        {
+            j++;
+            continue;
+        }
+
+    }
+    return false;
+
+}
+}；
 </code></pre>
         </div>
 
@@ -213,12 +230,12 @@
     <div class="content">
         
 <span class="post-time">
-    最后更新时间：<time datetime="2018-03-04T05:20:43.139Z" itemprop="dateUpdated">2018-03-04 13:20:43</time>
+    最后更新时间：<time datetime="2018-03-26T06:57:25.239Z" itemprop="dateUpdated">2018-03-26 14:57:25</time>
 </span><br>
 
 
         
-        这里可以写作者留言，标签和 hexo 中所有变量及辅助函数等均可调用，示例：<a href="/2018/02/10/软件工程/" target="_blank" rel="external">http://yoursite.com/2018/02/10/软件工程/</a>
+        这里可以写作者留言，标签和 hexo 中所有变量及辅助函数等均可调用，示例：<a href="/2018/03/26/二维数组查找/" target="_blank" rel="external">http://yoursite.com/2018/03/26/二维数组查找/</a>
         
     </div>
     
@@ -239,6 +256,8 @@
 
         <div class="post-footer">
             
+	<ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/算法/">算法</a></li></ul>
+
 
             
 <div class="page-share-wrap">
@@ -247,7 +266,7 @@
 <div class="page-share" id="pageShare">
     <ul class="reset share-icons">
       <li>
-        <a class="weibo share-sns" target="_blank" href="http://service.weibo.com/share/share.php?url=http://yoursite.com/2018/02/10/软件工程/&title=《模板》 — null&pic=http://yoursite.com/img/avatar.jpg" data-title="微博">
+        <a class="weibo share-sns" target="_blank" href="http://service.weibo.com/share/share.php?url=http://yoursite.com/2018/03/26/二维数组查找/&title=《二维数组查找》 — null&pic=http://yoursite.com/img/avatar.jpg" data-title="微博">
           <i class="icon icon-weibo"></i>
         </a>
       </li>
@@ -257,22 +276,22 @@
         </a>
       </li>
       <li>
-        <a class="qq share-sns" target="_blank" href="http://connect.qq.com/widget/shareqq/index.html?url=http://yoursite.com/2018/02/10/软件工程/&title=《模板》 — null&source=Welcome to LaoJia's blog" data-title=" QQ">
+        <a class="qq share-sns" target="_blank" href="http://connect.qq.com/widget/shareqq/index.html?url=http://yoursite.com/2018/03/26/二维数组查找/&title=《二维数组查找》 — null&source=Welcome to LaoJia's blog" data-title=" QQ">
           <i class="icon icon-qq"></i>
         </a>
       </li>
       <li>
-        <a class="facebook share-sns" target="_blank" href="https://www.facebook.com/sharer/sharer.php?u=http://yoursite.com/2018/02/10/软件工程/" data-title=" Facebook">
+        <a class="facebook share-sns" target="_blank" href="https://www.facebook.com/sharer/sharer.php?u=http://yoursite.com/2018/03/26/二维数组查找/" data-title=" Facebook">
           <i class="icon icon-facebook"></i>
         </a>
       </li>
       <li>
-        <a class="twitter share-sns" target="_blank" href="https://twitter.com/intent/tweet?text=《模板》 — null&url=http://yoursite.com/2018/02/10/软件工程/&via=http://yoursite.com" data-title=" Twitter">
+        <a class="twitter share-sns" target="_blank" href="https://twitter.com/intent/tweet?text=《二维数组查找》 — null&url=http://yoursite.com/2018/03/26/二维数组查找/&via=http://yoursite.com" data-title=" Twitter">
           <i class="icon icon-twitter"></i>
         </a>
       </li>
       <li>
-        <a class="google share-sns" target="_blank" href="https://plus.google.com/share?url=http://yoursite.com/2018/02/10/软件工程/" data-title=" Google+">
+        <a class="google share-sns" target="_blank" href="https://plus.google.com/share?url=http://yoursite.com/2018/03/26/二维数组查找/" data-title=" Google+">
           <i class="icon icon-google-plus"></i>
         </a>
       </li>
@@ -295,18 +314,18 @@
 <nav class="post-nav flex-row flex-justify-between">
   
     <div class="waves-block waves-effect prev">
-      <a href="/2018/02/10/安卓布局介绍/" id="post-prev" class="post-nav-link">
+      <a href="/2018/03/26/替换空格/" id="post-prev" class="post-nav-link">
         <div class="tips"><i class="icon icon-angle-left icon-lg icon-pr"></i> Prev</div>
-        <h4 class="title">安卓布局和架构</h4>
+        <h4 class="title">替换空格</h4>
       </a>
     </div>
   
 
   
     <div class="waves-block waves-effect next">
-      <a href="/2018/02/10/操作系统/" id="post-next" class="post-nav-link">
+      <a href="/2018/03/04/java-string/" id="post-next" class="post-nav-link">
         <div class="tips">Next <i class="icon icon-angle-right icon-lg icon-pl"></i></div>
-        <h4 class="title">模板</h4>
+        <h4 class="title">java string</h4>
       </a>
     </div>
   
@@ -398,7 +417,7 @@
 <div class="global-share" id="globalShare">
     <ul class="reset share-icons">
       <li>
-        <a class="weibo share-sns" target="_blank" href="http://service.weibo.com/share/share.php?url=http://yoursite.com/2018/02/10/软件工程/&title=《模板》 — null&pic=http://yoursite.com/img/avatar.jpg" data-title="微博">
+        <a class="weibo share-sns" target="_blank" href="http://service.weibo.com/share/share.php?url=http://yoursite.com/2018/03/26/二维数组查找/&title=《二维数组查找》 — null&pic=http://yoursite.com/img/avatar.jpg" data-title="微博">
           <i class="icon icon-weibo"></i>
         </a>
       </li>
@@ -408,22 +427,22 @@
         </a>
       </li>
       <li>
-        <a class="qq share-sns" target="_blank" href="http://connect.qq.com/widget/shareqq/index.html?url=http://yoursite.com/2018/02/10/软件工程/&title=《模板》 — null&source=Welcome to LaoJia's blog" data-title=" QQ">
+        <a class="qq share-sns" target="_blank" href="http://connect.qq.com/widget/shareqq/index.html?url=http://yoursite.com/2018/03/26/二维数组查找/&title=《二维数组查找》 — null&source=Welcome to LaoJia's blog" data-title=" QQ">
           <i class="icon icon-qq"></i>
         </a>
       </li>
       <li>
-        <a class="facebook share-sns" target="_blank" href="https://www.facebook.com/sharer/sharer.php?u=http://yoursite.com/2018/02/10/软件工程/" data-title=" Facebook">
+        <a class="facebook share-sns" target="_blank" href="https://www.facebook.com/sharer/sharer.php?u=http://yoursite.com/2018/03/26/二维数组查找/" data-title=" Facebook">
           <i class="icon icon-facebook"></i>
         </a>
       </li>
       <li>
-        <a class="twitter share-sns" target="_blank" href="https://twitter.com/intent/tweet?text=《模板》 — null&url=http://yoursite.com/2018/02/10/软件工程/&via=http://yoursite.com" data-title=" Twitter">
+        <a class="twitter share-sns" target="_blank" href="https://twitter.com/intent/tweet?text=《二维数组查找》 — null&url=http://yoursite.com/2018/03/26/二维数组查找/&via=http://yoursite.com" data-title=" Twitter">
           <i class="icon icon-twitter"></i>
         </a>
       </li>
       <li>
-        <a class="google share-sns" target="_blank" href="https://plus.google.com/share?url=http://yoursite.com/2018/02/10/软件工程/" data-title=" Google+">
+        <a class="google share-sns" target="_blank" href="https://plus.google.com/share?url=http://yoursite.com/2018/03/26/二维数组查找/" data-title=" Google+">
           <i class="icon icon-google-plus"></i>
         </a>
       </li>
@@ -434,7 +453,7 @@
 <div class="page-modal wx-share" id="wxShare">
     <a class="close" href="javascript:;"><i class="icon icon-close"></i></a>
     <p>扫一扫，分享到微信</p>
-    <img src="//api.qrserver.com/v1/create-qr-code/?data=http://yoursite.com/2018/02/10/软件工程/" alt="微信分享二维码">
+    <img src="//api.qrserver.com/v1/create-qr-code/?data=http://yoursite.com/2018/03/26/二维数组查找/" alt="微信分享二维码">
 </div>
 
 
