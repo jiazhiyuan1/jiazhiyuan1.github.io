@@ -20,18 +20,18 @@
     
     
     <meta name="keywords" content="剑指offer">
-    <meta name="description" content="Welcome to LaoJia&apos;s blog">
+    <meta name="description" content="#替换空格#请实现一个函数，将一个字符串中的空格替换成“%20”。例如，当字符串为We Are Happy.则经过替换之后的字符串为We%20Are%20Happy。  从后面开始可以避免交换次数package ss; public class Ss  { public static void main(String[] args) {     // TODO Auto-generated met">
 <meta name="keywords" content="剑指offer">
 <meta property="og:type" content="article">
 <meta property="og:title" content="替换空格">
 <meta property="og:url" content="http://yoursite.com/2018/03/26/替换空格/index.html">
 <meta property="og:site_name">
-<meta property="og:description" content="Welcome to LaoJia&apos;s blog">
+<meta property="og:description" content="#替换空格#请实现一个函数，将一个字符串中的空格替换成“%20”。例如，当字符串为We Are Happy.则经过替换之后的字符串为We%20Are%20Happy。  从后面开始可以避免交换次数package ss; public class Ss  { public static void main(String[] args) {     // TODO Auto-generated met">
 <meta property="og:locale" content="zh-CN">
-<meta property="og:updated_time" content="2018-03-26T07:44:06.979Z">
+<meta property="og:updated_time" content="2018-03-26T11:28:01.822Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="替换空格">
-<meta name="twitter:description" content="Welcome to LaoJia&apos;s blog">
+<meta name="twitter:description" content="#替换空格#请实现一个函数，将一个字符串中的空格替换成“%20”。例如，当字符串为We Are Happy.则经过替换之后的字符串为We%20Are%20Happy。  从后面开始可以避免交换次数package ss; public class Ss  { public static void main(String[] args) {     // TODO Auto-generated met">
     
     <link rel="shortcut icon" href="/favicon.ico">
     <link rel="stylesheet" href="//unpkg.com/hexo-theme-material-indigo@latest/css/style.css">
@@ -190,7 +190,51 @@
 
         </div>
         <div class="post-content" id="post-content" itemprop="postContent">
-            
+            <p>#替换空格#<br>请实现一个函数，将一个字符串中的空格替换成“%20”。例如，当字符串为We Are Happy.则经过替换之后的字符串为We%20Are%20Happy。</p>
+<ul>
+<li>从后面开始可以避免交换次数<pre><code>package ss;
+public class Ss 
+{
+public static void main(String[] args) {
+    // TODO Auto-generated method stub
+    StringBuffer array=new StringBuffer(&quot;sa sss qe&quot;);
+    new Solution().replaceSpace(array);
+    System.out.println(array);
+}
+}
+class Solution
+{
+public String replaceSpace(StringBuffer str)
+{
+    int spacenum = 0;
+for(int i=0;i&lt;str.length();i++)
+{
+if(str.charAt(i)==&apos; &apos;)
+    spacenum++;
+}
+ int indexold = str.length()-1;
+ int newlength = str.length()+spacenum*2;
+ int indexnew = newlength-1;
+ str.setLength(newlength);
+ for(;indexold&gt;=0 &amp;&amp; indexold&lt;newlength;indexold--)
+ {
+   if(str.charAt(indexold) == &apos; &apos;)
+   {
+    str.setCharAt(indexnew--, &apos;0&apos;);
+    str.setCharAt(indexnew--, &apos;2&apos;);
+    str.setCharAt(indexnew--, &apos;%&apos;);
+   }
+   else
+        {
+        str.setCharAt(indexnew--, str.charAt(indexold));
+        }
+  }
+   return str.toString();
+}
+}
+</code></pre></li>
+</ul>
+
         </div>
 
         <blockquote class="post-copyright">
@@ -198,7 +242,7 @@
     <div class="content">
         
 <span class="post-time">
-    最后更新时间：<time datetime="2018-03-26T07:44:06.979Z" itemprop="dateUpdated">2018-03-26 15:44:06</time>
+    最后更新时间：<time datetime="2018-03-26T11:28:01.822Z" itemprop="dateUpdated">2018-03-26 19:28:01</time>
 </span><br>
 
 
@@ -279,7 +323,14 @@
     </div>
 
     
-<nav class="post-nav flex-row flex-justify-between flex-row-reverse">
+<nav class="post-nav flex-row flex-justify-between">
+  
+    <div class="waves-block waves-effect prev">
+      <a href="/2018/03/27/mysql进阶/" id="post-prev" class="post-nav-link">
+        <div class="tips"><i class="icon icon-angle-left icon-lg icon-pr"></i> Prev</div>
+        <h4 class="title">mysql进阶</h4>
+      </a>
+    </div>
   
 
   
