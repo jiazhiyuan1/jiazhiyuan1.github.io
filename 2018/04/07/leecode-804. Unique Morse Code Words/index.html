@@ -13,24 +13,25 @@
     
     
     
-    <title>leetcode  | </title>
+    <title>Unique Morse Code Words | </title>
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
     
     <meta name="theme-color" content="#3F51B5">
     
     
-    <meta name="keywords" content="">
-    <meta name="description" content="Welcome to LaoJia&apos;s blog">
+    <meta name="keywords" content="leetcode">
+    <meta name="description" content="*International Morse Code defines a standard encoding where each letter is mapped to a series of dots and dashes, as follows: “a” maps to “.-“, “b” maps to “-…”, “c” maps to “-.-.”, and so on. For con">
+<meta name="keywords" content="leetcode">
 <meta property="og:type" content="article">
-<meta property="og:title" content="leetcode ">
-<meta property="og:url" content="http://yoursite.com/2018/04/11/leetcode/index.html">
+<meta property="og:title" content="Unique Morse Code Words">
+<meta property="og:url" content="http://yoursite.com/2018/04/07/leecode-804. Unique Morse Code Words/index.html">
 <meta property="og:site_name">
-<meta property="og:description" content="Welcome to LaoJia&apos;s blog">
+<meta property="og:description" content="*International Morse Code defines a standard encoding where each letter is mapped to a series of dots and dashes, as follows: “a” maps to “.-“, “b” maps to “-…”, “c” maps to “-.-.”, and so on. For con">
 <meta property="og:locale" content="zh-CN">
-<meta property="og:updated_time" content="2018-04-10T16:08:03.506Z">
+<meta property="og:updated_time" content="2018-04-12T02:43:40.876Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="leetcode ">
-<meta name="twitter:description" content="Welcome to LaoJia&apos;s blog">
+<meta name="twitter:title" content="Unique Morse Code Words">
+<meta name="twitter:description" content="*International Morse Code defines a standard encoding where each letter is mapped to a series of dots and dashes, as follows: “a” maps to “.-“, “b” maps to “-…”, “c” maps to “-.-.”, and so on. For con">
     
     <link rel="shortcut icon" href="/favicon.ico">
     <link rel="stylesheet" href="//unpkg.com/hexo-theme-material-indigo@latest/css/style.css">
@@ -123,7 +124,7 @@
         <a href="javascript:;" class="header-icon waves-effect waves-circle waves-light on" id="menu-toggle">
           <i class="icon icon-lg icon-navicon"></i>
         </a>
-        <div class="flex-col header-title ellipsis">leetcode </div>
+        <div class="flex-col header-title ellipsis">Unique Morse Code Words</div>
         
         <div class="search-wrap" id="search-wrap">
             <a href="javascript:;" class="header-icon waves-effect waves-circle waves-light" id="back">
@@ -145,13 +146,15 @@
 <header class="content-header post-header">
 
     <div class="container fade-scale">
-        <h1 class="title">leetcode </h1>
+        <h1 class="title">Unique Morse Code Words</h1>
         <h5 class="subtitle">
             
-                <time datetime="2018-04-10T16:08:03.000Z" itemprop="datePublished" class="page-time">
-  2018-04-11
+                <time datetime="2018-04-07T04:13:31.000Z" itemprop="datePublished" class="page-time">
+  2018-04-07
 </time>
 
+
+	<ul class="article-category-list"><li class="article-category-list-item"><a class="article-category-list-link" href="/categories/算法/">算法</a></li></ul>
 
             
         </h5>
@@ -166,15 +169,17 @@
 <div class="container body-wrap">
     
 
-<article id="post-leetcode"
+<article id="post-leecode-804. Unique Morse Code Words"
   class="post-article article-type-post fade" itemprop="blogPost">
 
     <div class="post-card">
-        <h1 class="post-card-title">leetcode </h1>
+        <h1 class="post-card-title">Unique Morse Code Words</h1>
         <div class="post-meta">
-            <time class="post-time" title="2018-04-11 00:08:03" datetime="2018-04-10T16:08:03.000Z"  itemprop="datePublished">2018-04-11</time>
+            <time class="post-time" title="2018-04-07 12:13:31" datetime="2018-04-07T04:13:31.000Z"  itemprop="datePublished">2018-04-07</time>
 
             
+	<ul class="article-category-list"><li class="article-category-list-item"><a class="article-category-list-link" href="/categories/算法/">算法</a></li></ul>
+
 
 
             
@@ -185,7 +190,36 @@
 
         </div>
         <div class="post-content" id="post-content" itemprop="postContent">
-            
+            <p>*International Morse Code defines a standard encoding where each letter is mapped to a series of dots and dashes, as follows: “a” maps to “.-“, “b” maps to “-…”, “c” maps to “-.-.”, and so on.</p>
+<p>For convenience, the full table for the 26 letters of the English alphabet is given below:*</p>
+<pre><code>[&quot;.-&quot;,&quot;-...&quot;,&quot;-.-.&quot;,&quot;-..&quot;,&quot;.&quot;,&quot;..-.&quot;,&quot;--.&quot;,&quot;....&quot;,&quot;..&quot;,&quot;.---&quot;,&quot;-.-&quot;,&quot;.-..&quot;,&quot;--&quot;,&quot;-.&quot;,&quot;---&quot;,&quot;.--.&quot;,&quot;--.-&quot;,&quot;.-.&quot;,&quot;...&quot;,&quot;-&quot;,&quot;..-&quot;,&quot;...-&quot;,&quot;.--&quot;,&quot;-..-&quot;,&quot;-.--&quot;,&quot;--..&quot;]
+</code></pre><p>*Now, given a list of words, each word can be written as a concatenation of the Morse code of each letter. For example, “cab” can be written as “-.-.-….-“, (which is the concatenation “-.-.” + “-…” + “.-“). We’ll call such a concatenation, the transformation of a word.</p>
+<p>Return the number of different transformations among all words we have.*</p>
+<pre><code>Example:
+Input: words = [&quot;gin&quot;, &quot;zen&quot;, &quot;gig&quot;, &quot;msg&quot;]
+Output: 2
+Explanation: 
+The transformation of each word is:
+&quot;gin&quot; -&gt; &quot;--...-.&quot;
+&quot;zen&quot; -&gt; &quot;--...-.&quot;
+&quot;gig&quot; -&gt; &quot;--...--.&quot;
+&quot;msg&quot; -&gt; &quot;--...--.&quot;
+
+There are 2 different transformations, &quot;--...-.&quot; and &quot;--...--.&quot;.
+</code></pre><p><em>代码：</em></p>
+<pre><code>class Solution {
+public int uniqueMorseRepresentations(String[] words) {
+  String[] d = {&quot;.-&quot;, &quot;-...&quot;, &quot;-.-.&quot;, &quot;-..&quot;, &quot;.&quot;, &quot;..-.&quot;, &quot;--.&quot;, &quot;....&quot;, &quot;..&quot;, &quot;.---&quot;, &quot;-.-&quot;, &quot;.-..&quot;, &quot;--&quot;, &quot;-.&quot;, &quot;---&quot;, &quot;.--.&quot;, &quot;--.-&quot;, &quot;.-.&quot;, &quot;...&quot;, &quot;-&quot;, &quot;..-&quot;, &quot;...-&quot;, &quot;.--&quot;, &quot;-..-&quot;, &quot;-.--&quot;, &quot;--..&quot;};
+    HashSet&lt;String&gt; s = new HashSet&lt;&gt;();
+    for (String word : words) {
+        String code = &quot;&quot;;
+        for (char c : word.toCharArray()) code += d[c - &apos;a&apos;];
+        s.add(code);
+    }
+    return s.size();  
+}
+}
+</code></pre>
         </div>
 
         <blockquote class="post-copyright">
@@ -193,12 +227,12 @@
     <div class="content">
         
 <span class="post-time">
-    最后更新时间：<time datetime="2018-04-10T16:08:03.506Z" itemprop="dateUpdated">2018-04-11 00:08:03</time>
+    最后更新时间：<time datetime="2018-04-12T02:43:40.876Z" itemprop="dateUpdated">2018-04-12 10:43:40</time>
 </span><br>
 
 
         
-        这里可以写作者留言，标签和 hexo 中所有变量及辅助函数等均可调用，示例：<a href="/2018/04/11/leetcode/" target="_blank" rel="external">http://yoursite.com/2018/04/11/leetcode/</a>
+        这里可以写作者留言，标签和 hexo 中所有变量及辅助函数等均可调用，示例：<a href="/2018/04/07/leecode-804. Unique Morse Code Words/" target="_blank" rel="external">http://yoursite.com/2018/04/07/leecode-804. Unique Morse Code Words/</a>
         
     </div>
     
@@ -219,6 +253,8 @@
 
         <div class="post-footer">
             
+	<ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/leetcode/">leetcode</a></li></ul>
+
 
             
 <div class="page-share-wrap">
@@ -227,7 +263,7 @@
 <div class="page-share" id="pageShare">
     <ul class="reset share-icons">
       <li>
-        <a class="weibo share-sns" target="_blank" href="http://service.weibo.com/share/share.php?url=http://yoursite.com/2018/04/11/leetcode/&title=《leetcode 》 — null&pic=http://yoursite.com/img/avatar.jpg" data-title="微博">
+        <a class="weibo share-sns" target="_blank" href="http://service.weibo.com/share/share.php?url=http://yoursite.com/2018/04/07/leecode-804. Unique Morse Code Words/&title=《Unique Morse Code Words》 — null&pic=http://yoursite.com/img/avatar.jpg" data-title="微博">
           <i class="icon icon-weibo"></i>
         </a>
       </li>
@@ -237,22 +273,22 @@
         </a>
       </li>
       <li>
-        <a class="qq share-sns" target="_blank" href="http://connect.qq.com/widget/shareqq/index.html?url=http://yoursite.com/2018/04/11/leetcode/&title=《leetcode 》 — null&source=Welcome to LaoJia's blog" data-title=" QQ">
+        <a class="qq share-sns" target="_blank" href="http://connect.qq.com/widget/shareqq/index.html?url=http://yoursite.com/2018/04/07/leecode-804. Unique Morse Code Words/&title=《Unique Morse Code Words》 — null&source=Welcome to LaoJia's blog" data-title=" QQ">
           <i class="icon icon-qq"></i>
         </a>
       </li>
       <li>
-        <a class="facebook share-sns" target="_blank" href="https://www.facebook.com/sharer/sharer.php?u=http://yoursite.com/2018/04/11/leetcode/" data-title=" Facebook">
+        <a class="facebook share-sns" target="_blank" href="https://www.facebook.com/sharer/sharer.php?u=http://yoursite.com/2018/04/07/leecode-804. Unique Morse Code Words/" data-title=" Facebook">
           <i class="icon icon-facebook"></i>
         </a>
       </li>
       <li>
-        <a class="twitter share-sns" target="_blank" href="https://twitter.com/intent/tweet?text=《leetcode 》 — null&url=http://yoursite.com/2018/04/11/leetcode/&via=http://yoursite.com" data-title=" Twitter">
+        <a class="twitter share-sns" target="_blank" href="https://twitter.com/intent/tweet?text=《Unique Morse Code Words》 — null&url=http://yoursite.com/2018/04/07/leecode-804. Unique Morse Code Words/&via=http://yoursite.com" data-title=" Twitter">
           <i class="icon icon-twitter"></i>
         </a>
       </li>
       <li>
-        <a class="google share-sns" target="_blank" href="https://plus.google.com/share?url=http://yoursite.com/2018/04/11/leetcode/" data-title=" Google+">
+        <a class="google share-sns" target="_blank" href="https://plus.google.com/share?url=http://yoursite.com/2018/04/07/leecode-804. Unique Morse Code Words/" data-title=" Google+">
           <i class="icon icon-google-plus"></i>
         </a>
       </li>
@@ -272,14 +308,21 @@
     </div>
 
     
-<nav class="post-nav flex-row flex-justify-between flex-row-reverse">
+<nav class="post-nav flex-row flex-justify-between">
+  
+    <div class="waves-block waves-effect prev">
+      <a href="/2018/04/11/leetcode/" id="post-prev" class="post-nav-link">
+        <div class="tips"><i class="icon icon-angle-left icon-lg icon-pr"></i> Prev</div>
+        <h4 class="title">leetcode </h4>
+      </a>
+    </div>
   
 
   
     <div class="waves-block waves-effect next">
-      <a href="/2018/04/07/leecode-804. Unique Morse Code Words/" id="post-next" class="post-nav-link">
+      <a href="/2018/04/06/html/" id="post-next" class="post-nav-link">
         <div class="tips">Next <i class="icon icon-angle-right icon-lg icon-pl"></i></div>
-        <h4 class="title">Unique Morse Code Words</h4>
+        <h4 class="title">html</h4>
       </a>
     </div>
   
@@ -371,7 +414,7 @@
 <div class="global-share" id="globalShare">
     <ul class="reset share-icons">
       <li>
-        <a class="weibo share-sns" target="_blank" href="http://service.weibo.com/share/share.php?url=http://yoursite.com/2018/04/11/leetcode/&title=《leetcode 》 — null&pic=http://yoursite.com/img/avatar.jpg" data-title="微博">
+        <a class="weibo share-sns" target="_blank" href="http://service.weibo.com/share/share.php?url=http://yoursite.com/2018/04/07/leecode-804. Unique Morse Code Words/&title=《Unique Morse Code Words》 — null&pic=http://yoursite.com/img/avatar.jpg" data-title="微博">
           <i class="icon icon-weibo"></i>
         </a>
       </li>
@@ -381,22 +424,22 @@
         </a>
       </li>
       <li>
-        <a class="qq share-sns" target="_blank" href="http://connect.qq.com/widget/shareqq/index.html?url=http://yoursite.com/2018/04/11/leetcode/&title=《leetcode 》 — null&source=Welcome to LaoJia's blog" data-title=" QQ">
+        <a class="qq share-sns" target="_blank" href="http://connect.qq.com/widget/shareqq/index.html?url=http://yoursite.com/2018/04/07/leecode-804. Unique Morse Code Words/&title=《Unique Morse Code Words》 — null&source=Welcome to LaoJia's blog" data-title=" QQ">
           <i class="icon icon-qq"></i>
         </a>
       </li>
       <li>
-        <a class="facebook share-sns" target="_blank" href="https://www.facebook.com/sharer/sharer.php?u=http://yoursite.com/2018/04/11/leetcode/" data-title=" Facebook">
+        <a class="facebook share-sns" target="_blank" href="https://www.facebook.com/sharer/sharer.php?u=http://yoursite.com/2018/04/07/leecode-804. Unique Morse Code Words/" data-title=" Facebook">
           <i class="icon icon-facebook"></i>
         </a>
       </li>
       <li>
-        <a class="twitter share-sns" target="_blank" href="https://twitter.com/intent/tweet?text=《leetcode 》 — null&url=http://yoursite.com/2018/04/11/leetcode/&via=http://yoursite.com" data-title=" Twitter">
+        <a class="twitter share-sns" target="_blank" href="https://twitter.com/intent/tweet?text=《Unique Morse Code Words》 — null&url=http://yoursite.com/2018/04/07/leecode-804. Unique Morse Code Words/&via=http://yoursite.com" data-title=" Twitter">
           <i class="icon icon-twitter"></i>
         </a>
       </li>
       <li>
-        <a class="google share-sns" target="_blank" href="https://plus.google.com/share?url=http://yoursite.com/2018/04/11/leetcode/" data-title=" Google+">
+        <a class="google share-sns" target="_blank" href="https://plus.google.com/share?url=http://yoursite.com/2018/04/07/leecode-804. Unique Morse Code Words/" data-title=" Google+">
           <i class="icon icon-google-plus"></i>
         </a>
       </li>
@@ -407,7 +450,7 @@
 <div class="page-modal wx-share" id="wxShare">
     <a class="close" href="javascript:;"><i class="icon icon-close"></i></a>
     <p>扫一扫，分享到微信</p>
-    <img src="//api.qrserver.com/v1/create-qr-code/?data=http://yoursite.com/2018/04/11/leetcode/" alt="微信分享二维码">
+    <img src="//api.qrserver.com/v1/create-qr-code/?data=http://yoursite.com/2018/04/07/leecode-804. Unique Morse Code Words/" alt="微信分享二维码">
 </div>
 
 
