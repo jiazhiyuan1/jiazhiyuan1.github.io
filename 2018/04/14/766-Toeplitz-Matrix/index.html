@@ -28,7 +28,7 @@
 <meta property="og:site_name">
 <meta property="og:description" content="A matrix is Toeplitz if every diagonal from top-left to bottom-right has the same element.Now given an M x N matrix, return True if and only if the matrix is Toeplitz。 Example 1:Input: matrix = [[1,2,">
 <meta property="og:locale" content="zh-CN">
-<meta property="og:updated_time" content="2018-04-14T03:49:05.603Z">
+<meta property="og:updated_time" content="2018-04-14T03:53:02.811Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="766. Toeplitz Matrix">
 <meta name="twitter:description" content="A matrix is Toeplitz if every diagonal from top-left to bottom-right has the same element.Now given an M x N matrix, return True if and only if the matrix is Toeplitz。 Example 1:Input: matrix = [[1,2,">
@@ -219,8 +219,33 @@ In the above grid, the diagonals are &quot;[9]&quot;, &quot;[5, 5]&quot;, &quot;
     return true;
 }
 }
-</code></pre><p>#代码：<br>    class Solution {<br>    public boolean isToeplitzMatrix(int[][] matrix) {<br>        int row = matrix.length;<br>        int column = matrix[0].length;<br>        for(int i = 0;i&lt;row;i++){<br>            int sum = matrix[i][0];<br>            for(int j = 1;j<20;j++){ if(i+j="">=row || j&gt;=column){<br>                    break;<br>                }<br>                if(sum != matrix[i+j][j]){<br>                   return false;<br>                }<br>            }<br>        }<br>        for(int i = 0;i&lt;column;i++){<br>            int sum = matrix[0][i];<br>            for(int j = 0;j<20;j++){ if(i+j="">=column || j&gt;=row){<br>                    break;<br>                }<br>                if(sum != matrix[j][j+i]){<br>                    return false;<br>                }<br>            }</20;j++){></20;j++){></p>
-
+</code></pre><p>#代码：</p>
+<pre><code> class Solution {
+public boolean isToeplitzMatrix(int[][] matrix) {
+    int row = matrix.length;
+    int column = matrix[0].length;
+    for(int i = 0;i&lt;row;i++){
+        int sum = matrix[i][0];
+        for(int j = 1;j&lt;20;j++){
+            if(i+j&gt;=row || j&gt;=column){
+                break;
+            }
+            if(sum != matrix[i+j][j]){
+               return false; 
+            }
+        }
+    }
+    for(int i = 0;i&lt;column;i++){
+        int sum = matrix[0][i];
+        for(int j = 0;j&lt;20;j++){
+            if(i+j&gt;=column || j&gt;=row){
+                break;
+            }
+            if(sum != matrix[j][j+i]){
+                return false;
+            }
+        }
+</code></pre>
         </div>
 
         <blockquote class="post-copyright">
@@ -228,7 +253,7 @@ In the above grid, the diagonals are &quot;[9]&quot;, &quot;[5, 5]&quot;, &quot;
     <div class="content">
         
 <span class="post-time">
-    最后更新时间：<time datetime="2018-04-14T03:49:05.603Z" itemprop="dateUpdated">2018-04-14 11:49:05</time>
+    最后更新时间：<time datetime="2018-04-14T03:53:02.811Z" itemprop="dateUpdated">2018-04-14 11:53:02</time>
 </span><br>
 
 
