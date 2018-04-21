@@ -20,18 +20,18 @@
     
     
     <meta name="keywords" content="同步锁,local,java">
-    <meta name="description" content="#同步锁# ##……..## ##同步锁的弊端## 当线程任务中出现了多个同步（多个锁）时，如果同步中嵌套了其他 的同步。这容易引发一种现象：程序出现无限等待，这种现象被我们称为死锁。 ###死锁###    前提： 必须是多线程的出现同步嵌套         线程进入同步获取锁，不出去同步，不会释放锁。    死锁代码实现：    //定义两个锁    package thread2;    p">
+    <meta name="description" content="##同步锁的弊端## 当线程任务中出现了多个同步（多个锁）时，如果同步中嵌套了其他 的同步。这容易引发一种现象：程序出现无限等待，这种现象被我们称为死锁。 ###死锁###    前提： 必须是多线程的出现同步嵌套         线程进入同步获取锁，不出去同步，不会释放锁。    死锁代码实现：    //定义两个锁    package thread2;    public class Loc">
 <meta name="keywords" content="同步锁,local,java">
 <meta property="og:type" content="article">
 <meta property="og:title" content="同步锁和local接口">
 <meta property="og:url" content="http://yoursite.com/2018/03/26/1-java中的同步/index.html">
 <meta property="og:site_name">
-<meta property="og:description" content="#同步锁# ##……..## ##同步锁的弊端## 当线程任务中出现了多个同步（多个锁）时，如果同步中嵌套了其他 的同步。这容易引发一种现象：程序出现无限等待，这种现象被我们称为死锁。 ###死锁###    前提： 必须是多线程的出现同步嵌套         线程进入同步获取锁，不出去同步，不会释放锁。    死锁代码实现：    //定义两个锁    package thread2;    p">
+<meta property="og:description" content="##同步锁的弊端## 当线程任务中出现了多个同步（多个锁）时，如果同步中嵌套了其他 的同步。这容易引发一种现象：程序出现无限等待，这种现象被我们称为死锁。 ###死锁###    前提： 必须是多线程的出现同步嵌套         线程进入同步获取锁，不出去同步，不会释放锁。    死锁代码实现：    //定义两个锁    package thread2;    public class Loc">
 <meta property="og:locale" content="zh-CN">
-<meta property="og:updated_time" content="2018-04-18T09:46:49.251Z">
+<meta property="og:updated_time" content="2018-04-21T09:50:57.335Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="同步锁和local接口">
-<meta name="twitter:description" content="#同步锁# ##……..## ##同步锁的弊端## 当线程任务中出现了多个同步（多个锁）时，如果同步中嵌套了其他 的同步。这容易引发一种现象：程序出现无限等待，这种现象被我们称为死锁。 ###死锁###    前提： 必须是多线程的出现同步嵌套         线程进入同步获取锁，不出去同步，不会释放锁。    死锁代码实现：    //定义两个锁    package thread2;    p">
+<meta name="twitter:description" content="##同步锁的弊端## 当线程任务中出现了多个同步（多个锁）时，如果同步中嵌套了其他 的同步。这容易引发一种现象：程序出现无限等待，这种现象被我们称为死锁。 ###死锁###    前提： 必须是多线程的出现同步嵌套         线程进入同步获取锁，不出去同步，不会释放锁。    死锁代码实现：    //定义两个锁    package thread2;    public class Loc">
     
     <link rel="shortcut icon" href="/favicon.ico">
     <link rel="stylesheet" href="//unpkg.com/hexo-theme-material-indigo@latest/css/style.css">
@@ -190,9 +190,7 @@
 
         </div>
         <div class="post-content" id="post-content" itemprop="postContent">
-            <p>#同步锁#</p>
-<p>##……..##</p>
-<p>##同步锁的弊端##</p>
+            <p>##同步锁的弊端##</p>
 <pre><code>当线程任务中出现了多个同步（多个锁）时，如果同步中嵌套了其他
 的同步。这容易引发一种现象：程序出现无限等待，这种现象被我们称为死锁。
 </code></pre><p>###死锁###<br>    前提： 必须是多线程的出现同步嵌套<br>         线程进入同步获取锁，不出去同步，不会释放锁。<br>    死锁代码实现：<br>    //定义两个锁<br>    package thread2;<br>    public class LockA {<br>    private LockA (){}<br>    public static final LockA locka=new LockA();</p>
@@ -269,7 +267,7 @@ public static void main(String[] args) {
     <div class="content">
         
 <span class="post-time">
-    最后更新时间：<time datetime="2018-04-18T09:46:49.251Z" itemprop="dateUpdated">2018-04-18 17:46:49</time>
+    最后更新时间：<time datetime="2018-04-21T09:50:57.335Z" itemprop="dateUpdated">2018-04-21 17:50:57</time>
 </span><br>
 
 
@@ -353,18 +351,18 @@ public static void main(String[] args) {
 <nav class="post-nav flex-row flex-justify-between">
   
     <div class="waves-block waves-effect prev">
-      <a href="/2018/03/27/mysql进阶/" id="post-prev" class="post-nav-link">
+      <a href="/2018/03/26/替换空格/" id="post-prev" class="post-nav-link">
         <div class="tips"><i class="icon icon-angle-left icon-lg icon-pr"></i> Prev</div>
-        <h4 class="title">mysql进阶</h4>
+        <h4 class="title">替换空格</h4>
       </a>
     </div>
   
 
   
     <div class="waves-block waves-effect next">
-      <a href="/2018/03/26/替换空格/" id="post-next" class="post-nav-link">
+      <a href="/2018/03/26/二维数组查找/" id="post-next" class="post-nav-link">
         <div class="tips">Next <i class="icon icon-angle-right icon-lg icon-pl"></i></div>
-        <h4 class="title">替换空格</h4>
+        <h4 class="title">二维数组查找</h4>
       </a>
     </div>
   
