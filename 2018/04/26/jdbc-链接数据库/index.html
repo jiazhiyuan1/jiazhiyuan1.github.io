@@ -13,25 +13,25 @@
     
     
     
-    <title>javawebservlet  | </title>
+    <title>jdbc- 链接数据库 | </title>
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
     
     <meta name="theme-color" content="#3F51B5">
     
     
-    <meta name="keywords" content="javaweb,servlet">
-    <meta name="description" content="servlet入门案例编写一个了继承HttpServlet，并重写里面doget方法，因为主要是默认请求是get请求public class HelloServlet extends HttpServlet{ @Override protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws Servlet">
-<meta name="keywords" content="javaweb,servlet">
+    <meta name="keywords" content="jdbc,数据库,javaweb">
+    <meta name="description" content="数据库连接操作注册驱动 Class.forName(&amp;quot;com.mysql.jdbc.Driver&amp;quot;); //获取连接 Connection conn=DriverManager.getConnection(&amp;quot;jdbc:mysql://localhost:3306/day07&amp;quot;, &amp;quot;root&amp;quot;, &amp;quot;root&amp;quot;); //编">
+<meta name="keywords" content="jdbc,数据库,javaweb">
 <meta property="og:type" content="article">
-<meta property="og:title" content="javawebservlet ">
-<meta property="og:url" content="http://yoursite.com/2018/04/26/javawebservlet/index.html">
+<meta property="og:title" content="jdbc- 链接数据库">
+<meta property="og:url" content="http://yoursite.com/2018/04/26/jdbc-链接数据库/index.html">
 <meta property="og:site_name">
-<meta property="og:description" content="servlet入门案例编写一个了继承HttpServlet，并重写里面doget方法，因为主要是默认请求是get请求public class HelloServlet extends HttpServlet{ @Override protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws Servlet">
+<meta property="og:description" content="数据库连接操作注册驱动 Class.forName(&amp;quot;com.mysql.jdbc.Driver&amp;quot;); //获取连接 Connection conn=DriverManager.getConnection(&amp;quot;jdbc:mysql://localhost:3306/day07&amp;quot;, &amp;quot;root&amp;quot;, &amp;quot;root&amp;quot;); //编">
 <meta property="og:locale" content="zh-CN">
-<meta property="og:updated_time" content="2018-04-25T16:51:33.028Z">
+<meta property="og:updated_time" content="2018-04-26T07:04:27.928Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="javawebservlet ">
-<meta name="twitter:description" content="servlet入门案例编写一个了继承HttpServlet，并重写里面doget方法，因为主要是默认请求是get请求public class HelloServlet extends HttpServlet{ @Override protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws Servlet">
+<meta name="twitter:title" content="jdbc- 链接数据库">
+<meta name="twitter:description" content="数据库连接操作注册驱动 Class.forName(&amp;quot;com.mysql.jdbc.Driver&amp;quot;); //获取连接 Connection conn=DriverManager.getConnection(&amp;quot;jdbc:mysql://localhost:3306/day07&amp;quot;, &amp;quot;root&amp;quot;, &amp;quot;root&amp;quot;); //编">
     
     <link rel="shortcut icon" href="/favicon.ico">
     <link rel="stylesheet" href="//unpkg.com/hexo-theme-material-indigo@latest/css/style.css">
@@ -124,7 +124,7 @@
         <a href="javascript:;" class="header-icon waves-effect waves-circle waves-light on" id="menu-toggle">
           <i class="icon icon-lg icon-navicon"></i>
         </a>
-        <div class="flex-col header-title ellipsis">javawebservlet </div>
+        <div class="flex-col header-title ellipsis">jdbc- 链接数据库</div>
         
         <div class="search-wrap" id="search-wrap">
             <a href="javascript:;" class="header-icon waves-effect waves-circle waves-light" id="back">
@@ -146,10 +146,10 @@
 <header class="content-header post-header">
 
     <div class="container fade-scale">
-        <h1 class="title">javawebservlet </h1>
+        <h1 class="title">jdbc- 链接数据库</h1>
         <h5 class="subtitle">
             
-                <time datetime="2018-04-25T16:39:27.000Z" itemprop="datePublished" class="page-time">
+                <time datetime="2018-04-26T06:56:54.000Z" itemprop="datePublished" class="page-time">
   2018-04-26
 </time>
 
@@ -171,18 +171,18 @@
     <aside class="post-widget">
         <nav class="post-toc-wrap post-toc-shrink" id="post-toc">
             <h4>TOC</h4>
-            <ol class="post-toc"><li class="post-toc-item post-toc-level-1"><a class="post-toc-link" href="#servlet入门案例"><span class="post-toc-number">1.</span> <span class="post-toc-text">servlet入门案例</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#编写一个了继承HttpServlet，并重写里面doget方法，因为主要是默认请求是get请求"><span class="post-toc-number">1.1.</span> <span class="post-toc-text">编写一个了继承HttpServlet，并重写里面doget方法，因为主要是默认请求是get请求</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#编写配置文件"><span class="post-toc-number">1.2.</span> <span class="post-toc-text">编写配置文件</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#注册servlet"><span class="post-toc-number">1.2.1.</span> <span class="post-toc-text">注册servlet</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#绑定路径"><span class="post-toc-number">1.2.2.</span> <span class="post-toc-text">绑定路径</span></a></li></ol></li></ol></li></ol>
+            <ol class="post-toc"><li class="post-toc-item post-toc-level-1"><a class="post-toc-link" href="#数据库连接操作"><span class="post-toc-number">1.</span> <span class="post-toc-text">数据库连接操作</span></a></li></ol>
         </nav>
     </aside>
 
 
-<article id="post-javawebservlet"
+<article id="post-jdbc-链接数据库"
   class="post-article article-type-post fade" itemprop="blogPost">
 
     <div class="post-card">
-        <h1 class="post-card-title">javawebservlet </h1>
+        <h1 class="post-card-title">jdbc- 链接数据库</h1>
         <div class="post-meta">
-            <time class="post-time" title="2018-04-26 00:39:27" datetime="2018-04-25T16:39:27.000Z"  itemprop="datePublished">2018-04-26</time>
+            <time class="post-time" title="2018-04-26 14:56:54" datetime="2018-04-26T06:56:54.000Z"  itemprop="datePublished">2018-04-26</time>
 
             
 	<ul class="article-category-list"><li class="article-category-list-item"><a class="article-category-list-link" href="/categories/javaweb/">javaweb</a></li></ul>
@@ -197,29 +197,26 @@
 
         </div>
         <div class="post-content" id="post-content" itemprop="postContent">
-            <h1 id="servlet入门案例"><a href="#servlet入门案例" class="headerlink" title="servlet入门案例"></a>servlet入门案例</h1><h2 id="编写一个了继承HttpServlet，并重写里面doget方法，因为主要是默认请求是get请求"><a href="#编写一个了继承HttpServlet，并重写里面doget方法，因为主要是默认请求是get请求" class="headerlink" title="编写一个了继承HttpServlet，并重写里面doget方法，因为主要是默认请求是get请求"></a>编写一个了继承HttpServlet，并重写里面doget方法，因为主要是默认请求是get请求</h2><pre><code>public class HelloServlet extends HttpServlet{
-@Override
-protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
-        System.out.println(&quot;请求已收到&quot;);
-    }
+            <h1 id="数据库连接操作"><a href="#数据库连接操作" class="headerlink" title="数据库连接操作"></a>数据库连接操作</h1><pre><code>注册驱动
+Class.forName(&quot;com.mysql.jdbc.Driver&quot;);
+//获取连接
+Connection conn=DriverManager.getConnection(&quot;jdbc:mysql://localhost:3306/day07&quot;, &quot;root&quot;, &quot;root&quot;);
+//编写sql
+String sql=&quot;select * from category&quot;;
+//创建语句执行者
+PreparedStatement st=conn.prepareStatement(sql);
+//设置参数
 
+//执行sql
+ResultSet rs =st.executeQuery();
+while(rs.next()) {
+    System.out.println(rs.getString(&quot;cid&quot;)+&quot;::&quot;+rs.getString(&quot;cname&quot;));
 }
-</code></pre><h2 id="编写配置文件"><a href="#编写配置文件" class="headerlink" title="编写配置文件"></a>编写配置文件</h2><h3 id="注册servlet"><a href="#注册servlet" class="headerlink" title="注册servlet"></a>注册servlet</h3><pre><code> &lt;!-- a.注册 servlet 使用 servlet标签
-       serlvet-name：给servlet起一个名字全局唯一
-       serlvet-class： 存一个servlet全限定名
- --&gt;   
-&lt;servlet&gt;
-        &lt;servlet-name&gt;HelloServlet&lt;/servlet-name&gt;
-        &lt;servlet-class&gt;com.heima.a_hello.HelloServlet&lt;/servlet-class&gt;
-&lt;/servlet&gt;
-</code></pre><h3 id="绑定路径"><a href="#绑定路径" class="headerlink" title="绑定路径"></a>绑定路径</h3><pre><code>&lt;!-- b.绑定路径使用servlet-mapping标签 v
-       servlet-name: 使用上面已七号的名字建议复制
-       url-pattern: 访问路径 要求：目前必须以&quot;/&quot;开头唯一
---&gt;
-&lt;servlet-mapping&gt;
-&lt;servlet-name&gt;HelloServlet&lt;/servlet-name&gt;
-&lt;url-pattern&gt;/hello&lt;/url-pattern&gt;
-&lt;/servlet-mapping&gt;
+//释放资源
+
+rs.close();
+st.close();
+conn.close();
 </code></pre>
         </div>
 
@@ -228,12 +225,12 @@ protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws Se
     <div class="content">
         
 <span class="post-time">
-    最后更新时间：<time datetime="2018-04-25T16:51:33.028Z" itemprop="dateUpdated">2018-04-26 00:51:33</time>
+    最后更新时间：<time datetime="2018-04-26T07:04:27.928Z" itemprop="dateUpdated">2018-04-26 15:04:27</time>
 </span><br>
 
 
         
-        这里可以写作者留言，标签和 hexo 中所有变量及辅助函数等均可调用，示例：<a href="/2018/04/26/javawebservlet/" target="_blank" rel="external">http://yoursite.com/2018/04/26/javawebservlet/</a>
+        这里可以写作者留言，标签和 hexo 中所有变量及辅助函数等均可调用，示例：<a href="/2018/04/26/jdbc-链接数据库/" target="_blank" rel="external">http://yoursite.com/2018/04/26/jdbc-链接数据库/</a>
         
     </div>
     
@@ -254,7 +251,7 @@ protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws Se
 
         <div class="post-footer">
             
-	<ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/javaweb/">javaweb</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/servlet/">servlet</a></li></ul>
+	<ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/javaweb/">javaweb</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/jdbc/">jdbc</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/数据库/">数据库</a></li></ul>
 
 
             
@@ -264,7 +261,7 @@ protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws Se
 <div class="page-share" id="pageShare">
     <ul class="reset share-icons">
       <li>
-        <a class="weibo share-sns" target="_blank" href="http://service.weibo.com/share/share.php?url=http://yoursite.com/2018/04/26/javawebservlet/&title=《javawebservlet 》 — null&pic=http://yoursite.com/img/avatar.jpg" data-title="微博">
+        <a class="weibo share-sns" target="_blank" href="http://service.weibo.com/share/share.php?url=http://yoursite.com/2018/04/26/jdbc-链接数据库/&title=《jdbc- 链接数据库》 — null&pic=http://yoursite.com/img/avatar.jpg" data-title="微博">
           <i class="icon icon-weibo"></i>
         </a>
       </li>
@@ -274,22 +271,22 @@ protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws Se
         </a>
       </li>
       <li>
-        <a class="qq share-sns" target="_blank" href="http://connect.qq.com/widget/shareqq/index.html?url=http://yoursite.com/2018/04/26/javawebservlet/&title=《javawebservlet 》 — null&source=Welcome to LaoJia's blog" data-title=" QQ">
+        <a class="qq share-sns" target="_blank" href="http://connect.qq.com/widget/shareqq/index.html?url=http://yoursite.com/2018/04/26/jdbc-链接数据库/&title=《jdbc- 链接数据库》 — null&source=Welcome to LaoJia's blog" data-title=" QQ">
           <i class="icon icon-qq"></i>
         </a>
       </li>
       <li>
-        <a class="facebook share-sns" target="_blank" href="https://www.facebook.com/sharer/sharer.php?u=http://yoursite.com/2018/04/26/javawebservlet/" data-title=" Facebook">
+        <a class="facebook share-sns" target="_blank" href="https://www.facebook.com/sharer/sharer.php?u=http://yoursite.com/2018/04/26/jdbc-链接数据库/" data-title=" Facebook">
           <i class="icon icon-facebook"></i>
         </a>
       </li>
       <li>
-        <a class="twitter share-sns" target="_blank" href="https://twitter.com/intent/tweet?text=《javawebservlet 》 — null&url=http://yoursite.com/2018/04/26/javawebservlet/&via=http://yoursite.com" data-title=" Twitter">
+        <a class="twitter share-sns" target="_blank" href="https://twitter.com/intent/tweet?text=《jdbc- 链接数据库》 — null&url=http://yoursite.com/2018/04/26/jdbc-链接数据库/&via=http://yoursite.com" data-title=" Twitter">
           <i class="icon icon-twitter"></i>
         </a>
       </li>
       <li>
-        <a class="google share-sns" target="_blank" href="https://plus.google.com/share?url=http://yoursite.com/2018/04/26/javawebservlet/" data-title=" Google+">
+        <a class="google share-sns" target="_blank" href="https://plus.google.com/share?url=http://yoursite.com/2018/04/26/jdbc-链接数据库/" data-title=" Google+">
           <i class="icon icon-google-plus"></i>
         </a>
       </li>
@@ -309,21 +306,14 @@ protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws Se
     </div>
 
     
-<nav class="post-nav flex-row flex-justify-between">
-  
-    <div class="waves-block waves-effect prev">
-      <a href="/2018/04/26/jdbc-链接数据库/" id="post-prev" class="post-nav-link">
-        <div class="tips"><i class="icon icon-angle-left icon-lg icon-pr"></i> Prev</div>
-        <h4 class="title">jdbc- 链接数据库</h4>
-      </a>
-    </div>
+<nav class="post-nav flex-row flex-justify-between flex-row-reverse">
   
 
   
     <div class="waves-block waves-effect next">
-      <a href="/2018/04/24/532-K-diff-Pairs-in-an-Array/" id="post-next" class="post-nav-link">
+      <a href="/2018/04/26/javawebservlet/" id="post-next" class="post-nav-link">
         <div class="tips">Next <i class="icon icon-angle-right icon-lg icon-pl"></i></div>
-        <h4 class="title">532. K-diff Pairs in an Array </h4>
+        <h4 class="title">javawebservlet </h4>
       </a>
     </div>
   
@@ -415,7 +405,7 @@ protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws Se
 <div class="global-share" id="globalShare">
     <ul class="reset share-icons">
       <li>
-        <a class="weibo share-sns" target="_blank" href="http://service.weibo.com/share/share.php?url=http://yoursite.com/2018/04/26/javawebservlet/&title=《javawebservlet 》 — null&pic=http://yoursite.com/img/avatar.jpg" data-title="微博">
+        <a class="weibo share-sns" target="_blank" href="http://service.weibo.com/share/share.php?url=http://yoursite.com/2018/04/26/jdbc-链接数据库/&title=《jdbc- 链接数据库》 — null&pic=http://yoursite.com/img/avatar.jpg" data-title="微博">
           <i class="icon icon-weibo"></i>
         </a>
       </li>
@@ -425,22 +415,22 @@ protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws Se
         </a>
       </li>
       <li>
-        <a class="qq share-sns" target="_blank" href="http://connect.qq.com/widget/shareqq/index.html?url=http://yoursite.com/2018/04/26/javawebservlet/&title=《javawebservlet 》 — null&source=Welcome to LaoJia's blog" data-title=" QQ">
+        <a class="qq share-sns" target="_blank" href="http://connect.qq.com/widget/shareqq/index.html?url=http://yoursite.com/2018/04/26/jdbc-链接数据库/&title=《jdbc- 链接数据库》 — null&source=Welcome to LaoJia's blog" data-title=" QQ">
           <i class="icon icon-qq"></i>
         </a>
       </li>
       <li>
-        <a class="facebook share-sns" target="_blank" href="https://www.facebook.com/sharer/sharer.php?u=http://yoursite.com/2018/04/26/javawebservlet/" data-title=" Facebook">
+        <a class="facebook share-sns" target="_blank" href="https://www.facebook.com/sharer/sharer.php?u=http://yoursite.com/2018/04/26/jdbc-链接数据库/" data-title=" Facebook">
           <i class="icon icon-facebook"></i>
         </a>
       </li>
       <li>
-        <a class="twitter share-sns" target="_blank" href="https://twitter.com/intent/tweet?text=《javawebservlet 》 — null&url=http://yoursite.com/2018/04/26/javawebservlet/&via=http://yoursite.com" data-title=" Twitter">
+        <a class="twitter share-sns" target="_blank" href="https://twitter.com/intent/tweet?text=《jdbc- 链接数据库》 — null&url=http://yoursite.com/2018/04/26/jdbc-链接数据库/&via=http://yoursite.com" data-title=" Twitter">
           <i class="icon icon-twitter"></i>
         </a>
       </li>
       <li>
-        <a class="google share-sns" target="_blank" href="https://plus.google.com/share?url=http://yoursite.com/2018/04/26/javawebservlet/" data-title=" Google+">
+        <a class="google share-sns" target="_blank" href="https://plus.google.com/share?url=http://yoursite.com/2018/04/26/jdbc-链接数据库/" data-title=" Google+">
           <i class="icon icon-google-plus"></i>
         </a>
       </li>
@@ -451,7 +441,7 @@ protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws Se
 <div class="page-modal wx-share" id="wxShare">
     <a class="close" href="javascript:;"><i class="icon icon-close"></i></a>
     <p>扫一扫，分享到微信</p>
-    <img src="//api.qrserver.com/v1/create-qr-code/?data=http://yoursite.com/2018/04/26/javawebservlet/" alt="微信分享二维码">
+    <img src="//api.qrserver.com/v1/create-qr-code/?data=http://yoursite.com/2018/04/26/jdbc-链接数据库/" alt="微信分享二维码">
 </div>
 
 
