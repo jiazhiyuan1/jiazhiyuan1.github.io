@@ -13,24 +13,25 @@
     
     
     
-    <title>模板 | </title>
+    <title>javaweb-缓存技术  | </title>
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
     
     <meta name="theme-color" content="#3F51B5">
     
     
-    <meta name="keywords" content="">
-    <meta name="description" content="Welcome to LaoJia&apos;s blog">
+    <meta name="keywords" content="javaweb,缓存,redis">
+    <meta name="description" content="在Javaweb开发中我们遇到从数据库中重复加载,但是只要换一次页面就会查询一下数据库,增加服务器的压力,对于数据不常变化的情况,我们可以使用缓存技术, 常见的缓存技术： ehcache:hibernate中底层使用了ehcache memcache redisehcache使用步骤: 导入jar包 编写配置文件 使用api 获取数据先从缓存中获取若获取的值为空再去查询数据库,数据放入缓存中 eh">
+<meta name="keywords" content="javaweb,缓存,redis">
 <meta property="og:type" content="article">
-<meta property="og:title" content="模板">
-<meta property="og:url" content="http://yoursite.com/2018/02/10/操作系统/index.html">
+<meta property="og:title" content="javaweb-缓存技术 ">
+<meta property="og:url" content="http://yoursite.com/2018/05/10/javaweb-初次緩存技術/index.html">
 <meta property="og:site_name">
-<meta property="og:description" content="Welcome to LaoJia&apos;s blog">
+<meta property="og:description" content="在Javaweb开发中我们遇到从数据库中重复加载,但是只要换一次页面就会查询一下数据库,增加服务器的压力,对于数据不常变化的情况,我们可以使用缓存技术, 常见的缓存技术： ehcache:hibernate中底层使用了ehcache memcache redisehcache使用步骤: 导入jar包 编写配置文件 使用api 获取数据先从缓存中获取若获取的值为空再去查询数据库,数据放入缓存中 eh">
 <meta property="og:locale" content="zh-CN">
-<meta property="og:updated_time" content="2018-03-25T06:22:45.335Z">
+<meta property="og:updated_time" content="2018-05-10T15:16:38.044Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="模板">
-<meta name="twitter:description" content="Welcome to LaoJia&apos;s blog">
+<meta name="twitter:title" content="javaweb-缓存技术 ">
+<meta name="twitter:description" content="在Javaweb开发中我们遇到从数据库中重复加载,但是只要换一次页面就会查询一下数据库,增加服务器的压力,对于数据不常变化的情况,我们可以使用缓存技术, 常见的缓存技术： ehcache:hibernate中底层使用了ehcache memcache redisehcache使用步骤: 导入jar包 编写配置文件 使用api 获取数据先从缓存中获取若获取的值为空再去查询数据库,数据放入缓存中 eh">
     
     <link rel="shortcut icon" href="/favicon.ico">
     <link rel="stylesheet" href="//unpkg.com/hexo-theme-material-indigo@latest/css/style.css">
@@ -123,7 +124,7 @@
         <a href="javascript:;" class="header-icon waves-effect waves-circle waves-light on" id="menu-toggle">
           <i class="icon icon-lg icon-navicon"></i>
         </a>
-        <div class="flex-col header-title ellipsis">模板</div>
+        <div class="flex-col header-title ellipsis">javaweb-缓存技术 </div>
         
         <div class="search-wrap" id="search-wrap">
             <a href="javascript:;" class="header-icon waves-effect waves-circle waves-light" id="back">
@@ -145,15 +146,15 @@
 <header class="content-header post-header">
 
     <div class="container fade-scale">
-        <h1 class="title">模板</h1>
+        <h1 class="title">javaweb-缓存技术 </h1>
         <h5 class="subtitle">
             
-                <time datetime="2018-02-10T08:22:26.000Z" itemprop="datePublished" class="page-time">
-  2018-02-10
+                <time datetime="2018-05-10T14:13:28.000Z" itemprop="datePublished" class="page-time">
+  2018-05-10
 </time>
 
 
-	<ul class="article-category-list"><li class="article-category-list-item"><a class="article-category-list-link" href="/categories/操作系统/">操作系统</a></li></ul>
+	<ul class="article-category-list"><li class="article-category-list-item"><a class="article-category-list-link" href="/categories/javaweb/">javaweb</a></li></ul>
 
             
         </h5>
@@ -167,17 +168,24 @@
 
 <div class="container body-wrap">
     
+    <aside class="post-widget">
+        <nav class="post-toc-wrap post-toc-shrink" id="post-toc">
+            <h4>TOC</h4>
+            <ol class="post-toc"><li class="post-toc-item post-toc-level-1"><a class="post-toc-link" href="#常见的缓存技术："><span class="post-toc-number">1.</span> <span class="post-toc-text">常见的缓存技术：</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#ehcache使用步骤"><span class="post-toc-number">1.1.</span> <span class="post-toc-text">ehcache使用步骤:</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#ehcache的配置文件"><span class="post-toc-number">1.1.1.</span> <span class="post-toc-text">ehcache的配置文件</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#ehcache实战"><span class="post-toc-number">1.1.2.</span> <span class="post-toc-text">ehcache实战</span></a></li></ol></li></ol></li></ol>
+        </nav>
+    </aside>
 
-<article id="post-操作系统"
+
+<article id="post-javaweb-初次緩存技術"
   class="post-article article-type-post fade" itemprop="blogPost">
 
     <div class="post-card">
-        <h1 class="post-card-title">模板</h1>
+        <h1 class="post-card-title">javaweb-缓存技术 </h1>
         <div class="post-meta">
-            <time class="post-time" title="2018-02-10 16:22:26" datetime="2018-02-10T08:22:26.000Z"  itemprop="datePublished">2018-02-10</time>
+            <time class="post-time" title="2018-05-10 22:13:28" datetime="2018-05-10T14:13:28.000Z"  itemprop="datePublished">2018-05-10</time>
 
             
-	<ul class="article-category-list"><li class="article-category-list-item"><a class="article-category-list-link" href="/categories/操作系统/">操作系统</a></li></ul>
+	<ul class="article-category-list"><li class="article-category-list-item"><a class="article-category-list-link" href="/categories/javaweb/">javaweb</a></li></ul>
 
 
 
@@ -189,7 +197,43 @@
 
         </div>
         <div class="post-content" id="post-content" itemprop="postContent">
-            
+            <p>在Javaweb开发中我们遇到从数据库中重复加载,但是只要换一次页面就会查询一下数据库,增加服务器的压力,对于数据不常变化的情况,我们可以使用缓存技术,</p>
+<h1 id="常见的缓存技术："><a href="#常见的缓存技术：" class="headerlink" title="常见的缓存技术："></a>常见的缓存技术：</h1><ul>
+<li>ehcache:hibernate中底层使用了ehcache</li>
+<li>memcache</li>
+<li>redis<h2 id="ehcache使用步骤"><a href="#ehcache使用步骤" class="headerlink" title="ehcache使用步骤:"></a>ehcache使用步骤:</h2></li>
+<li>导入jar包</li>
+<li>编写配置文件</li>
+<li>使用api</li>
+<li><p>获取数据先从缓存中获取<br>若获取的值为空<br>再去查询数据库,<br>数据放入缓存中</p>
+<h3 id="ehcache的配置文件"><a href="#ehcache的配置文件" class="headerlink" title="ehcache的配置文件"></a>ehcache的配置文件</h3>  <ehcache xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:nonamespaceschemalocation="../config/ehcache.xsd">
+
+  <diskstore path="C:/ehcache">
+
+  <cache name="categoryCache" maxelementsinmemory="10000" eternal="false" timetoidleseconds="120" timetoliveseconds="120" overflowtodisk="true" maxelementsondisk="10000000" diskpersistent="false" diskexpirythreadintervalseconds="120" memorystoreevictionpolicy="LRU">
+
+  <!--
+      默认缓存配置，
+      以下属性是必须的：
+          name ：cache的标识符，在一个CacheManager中必须唯一。
+          maxElementsInMemory ： 在内存中缓存的element的最大数目。
+          maxElementsOnDisk ： 在磁盘上缓存的element的最大数目。
+          eternal ： 设定缓存的elements是否有有效期。如果为true，timeouts属性被忽略。
+          overflowToDisk ： 设定当内存缓存溢出的时候是否将过期的element缓存到磁盘上。
+
+      以下属性是可选的：
+           timeToIdleSeconds ： 缓存element在过期前的空闲时间。
+           timeToLiveSeconds ： 缓存element的有效生命期。
+           diskPersistent ： 在VM重启的时候是否持久化磁盘缓存，默认是false。
+           diskExpiryThreadIntervalSeconds ： 磁盘缓存的清理线程运行间隔，默认是120秒.
+           memoryStoreEvictionPolicy ： 当内存缓存达到最大，有新的element加入的时候，
+              移除缓存中element的策略。默认是LRU，可选的有LFU和FIFO
+
+      -->
+<p>  </p></cache></diskstore></ehcache><p></p>
+<h3 id="ehcache实战"><a href="#ehcache实战" class="headerlink" title="ehcache实战"></a>ehcache实战</h3></li>
+</ul>
+
         </div>
 
         <blockquote class="post-copyright">
@@ -197,12 +241,12 @@
     <div class="content">
         
 <span class="post-time">
-    最后更新时间：<time datetime="2018-03-25T06:22:45.335Z" itemprop="dateUpdated">2018-03-25 14:22:45</time>
+    最后更新时间：<time datetime="2018-05-10T15:16:38.044Z" itemprop="dateUpdated">2018-05-10 23:16:38</time>
 </span><br>
 
 
         
-        这里可以写作者留言，标签和 hexo 中所有变量及辅助函数等均可调用，示例：<a href="/2018/02/10/操作系统/" target="_blank" rel="external">http://yoursite.com/2018/02/10/操作系统/</a>
+        这里可以写作者留言，标签和 hexo 中所有变量及辅助函数等均可调用，示例：<a href="/2018/05/10/javaweb-初次緩存技術/" target="_blank" rel="external">http://yoursite.com/2018/05/10/javaweb-初次緩存技術/</a>
         
     </div>
     
@@ -223,6 +267,8 @@
 
         <div class="post-footer">
             
+	<ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/javaweb/">javaweb</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/redis/">redis</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/缓存/">缓存</a></li></ul>
+
 
             
 <div class="page-share-wrap">
@@ -231,7 +277,7 @@
 <div class="page-share" id="pageShare">
     <ul class="reset share-icons">
       <li>
-        <a class="weibo share-sns" target="_blank" href="http://service.weibo.com/share/share.php?url=http://yoursite.com/2018/02/10/操作系统/&title=《模板》 — null&pic=http://yoursite.com/img/avatar.jpg" data-title="微博">
+        <a class="weibo share-sns" target="_blank" href="http://service.weibo.com/share/share.php?url=http://yoursite.com/2018/05/10/javaweb-初次緩存技術/&title=《javaweb-缓存技术 》 — null&pic=http://yoursite.com/img/avatar.jpg" data-title="微博">
           <i class="icon icon-weibo"></i>
         </a>
       </li>
@@ -241,22 +287,22 @@
         </a>
       </li>
       <li>
-        <a class="qq share-sns" target="_blank" href="http://connect.qq.com/widget/shareqq/index.html?url=http://yoursite.com/2018/02/10/操作系统/&title=《模板》 — null&source=Welcome to LaoJia's blog" data-title=" QQ">
+        <a class="qq share-sns" target="_blank" href="http://connect.qq.com/widget/shareqq/index.html?url=http://yoursite.com/2018/05/10/javaweb-初次緩存技術/&title=《javaweb-缓存技术 》 — null&source=Welcome to LaoJia's blog" data-title=" QQ">
           <i class="icon icon-qq"></i>
         </a>
       </li>
       <li>
-        <a class="facebook share-sns" target="_blank" href="https://www.facebook.com/sharer/sharer.php?u=http://yoursite.com/2018/02/10/操作系统/" data-title=" Facebook">
+        <a class="facebook share-sns" target="_blank" href="https://www.facebook.com/sharer/sharer.php?u=http://yoursite.com/2018/05/10/javaweb-初次緩存技術/" data-title=" Facebook">
           <i class="icon icon-facebook"></i>
         </a>
       </li>
       <li>
-        <a class="twitter share-sns" target="_blank" href="https://twitter.com/intent/tweet?text=《模板》 — null&url=http://yoursite.com/2018/02/10/操作系统/&via=http://yoursite.com" data-title=" Twitter">
+        <a class="twitter share-sns" target="_blank" href="https://twitter.com/intent/tweet?text=《javaweb-缓存技术 》 — null&url=http://yoursite.com/2018/05/10/javaweb-初次緩存技術/&via=http://yoursite.com" data-title=" Twitter">
           <i class="icon icon-twitter"></i>
         </a>
       </li>
       <li>
-        <a class="google share-sns" target="_blank" href="https://plus.google.com/share?url=http://yoursite.com/2018/02/10/操作系统/" data-title=" Google+">
+        <a class="google share-sns" target="_blank" href="https://plus.google.com/share?url=http://yoursite.com/2018/05/10/javaweb-初次緩存技術/" data-title=" Google+">
           <i class="icon icon-google-plus"></i>
         </a>
       </li>
@@ -279,18 +325,18 @@
 <nav class="post-nav flex-row flex-justify-between">
   
     <div class="waves-block waves-effect prev">
-      <a href="/2018/02/10/软件工程/" id="post-prev" class="post-nav-link">
+      <a href="/2018/05/17/javaweb-jQuery/" id="post-prev" class="post-nav-link">
         <div class="tips"><i class="icon icon-angle-left icon-lg icon-pr"></i> Prev</div>
-        <h4 class="title">模板</h4>
+        <h4 class="title">javaweb-jQuery</h4>
       </a>
     </div>
   
 
   
     <div class="waves-block waves-effect next">
-      <a href="/2018/02/09/汇编原理/" id="post-next" class="post-nav-link">
+      <a href="/2018/05/02/设计模式—普通工厂模式/" id="post-next" class="post-nav-link">
         <div class="tips">Next <i class="icon icon-angle-right icon-lg icon-pl"></i></div>
-        <h4 class="title">阶乘计算</h4>
+        <h4 class="title">设计模式—普通工厂模式</h4>
       </a>
     </div>
   
@@ -382,7 +428,7 @@
 <div class="global-share" id="globalShare">
     <ul class="reset share-icons">
       <li>
-        <a class="weibo share-sns" target="_blank" href="http://service.weibo.com/share/share.php?url=http://yoursite.com/2018/02/10/操作系统/&title=《模板》 — null&pic=http://yoursite.com/img/avatar.jpg" data-title="微博">
+        <a class="weibo share-sns" target="_blank" href="http://service.weibo.com/share/share.php?url=http://yoursite.com/2018/05/10/javaweb-初次緩存技術/&title=《javaweb-缓存技术 》 — null&pic=http://yoursite.com/img/avatar.jpg" data-title="微博">
           <i class="icon icon-weibo"></i>
         </a>
       </li>
@@ -392,22 +438,22 @@
         </a>
       </li>
       <li>
-        <a class="qq share-sns" target="_blank" href="http://connect.qq.com/widget/shareqq/index.html?url=http://yoursite.com/2018/02/10/操作系统/&title=《模板》 — null&source=Welcome to LaoJia's blog" data-title=" QQ">
+        <a class="qq share-sns" target="_blank" href="http://connect.qq.com/widget/shareqq/index.html?url=http://yoursite.com/2018/05/10/javaweb-初次緩存技術/&title=《javaweb-缓存技术 》 — null&source=Welcome to LaoJia's blog" data-title=" QQ">
           <i class="icon icon-qq"></i>
         </a>
       </li>
       <li>
-        <a class="facebook share-sns" target="_blank" href="https://www.facebook.com/sharer/sharer.php?u=http://yoursite.com/2018/02/10/操作系统/" data-title=" Facebook">
+        <a class="facebook share-sns" target="_blank" href="https://www.facebook.com/sharer/sharer.php?u=http://yoursite.com/2018/05/10/javaweb-初次緩存技術/" data-title=" Facebook">
           <i class="icon icon-facebook"></i>
         </a>
       </li>
       <li>
-        <a class="twitter share-sns" target="_blank" href="https://twitter.com/intent/tweet?text=《模板》 — null&url=http://yoursite.com/2018/02/10/操作系统/&via=http://yoursite.com" data-title=" Twitter">
+        <a class="twitter share-sns" target="_blank" href="https://twitter.com/intent/tweet?text=《javaweb-缓存技术 》 — null&url=http://yoursite.com/2018/05/10/javaweb-初次緩存技術/&via=http://yoursite.com" data-title=" Twitter">
           <i class="icon icon-twitter"></i>
         </a>
       </li>
       <li>
-        <a class="google share-sns" target="_blank" href="https://plus.google.com/share?url=http://yoursite.com/2018/02/10/操作系统/" data-title=" Google+">
+        <a class="google share-sns" target="_blank" href="https://plus.google.com/share?url=http://yoursite.com/2018/05/10/javaweb-初次緩存技術/" data-title=" Google+">
           <i class="icon icon-google-plus"></i>
         </a>
       </li>
@@ -418,7 +464,7 @@
 <div class="page-modal wx-share" id="wxShare">
     <a class="close" href="javascript:;"><i class="icon icon-close"></i></a>
     <p>扫一扫，分享到微信</p>
-    <img src="//api.qrserver.com/v1/create-qr-code/?data=http://yoursite.com/2018/02/10/操作系统/" alt="微信分享二维码">
+    <img src="//api.qrserver.com/v1/create-qr-code/?data=http://yoursite.com/2018/05/10/javaweb-初次緩存技術/" alt="微信分享二维码">
 </div>
 
 

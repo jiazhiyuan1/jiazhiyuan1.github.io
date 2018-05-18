@@ -1,0 +1,577 @@
+<!DOCTYPE html>
+<html>
+<head>
+    
+
+    
+
+    
+
+
+
+    <meta charset="utf-8">
+    
+    
+    
+    <title>javaweb-jQuery | </title>
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    
+    <meta name="theme-color" content="#3F51B5">
+    
+    
+    <meta name="keywords" content="java,jQuery,web">
+    <meta name="description" content="Jquery基础学习Jquery的作用 Jquery是对常用方法的封装，方便我们使用。 Jquery的基本用法1.   获取一个jquery对象：$(&amp;quot;选择器&amp;quot;)或者jQuery(&amp;quot;选择器&amp;quot;)     注意如果是id # 2.   dom对象和jquery对象之间的转换：     1.dom对象转换jQuery对象：$(dom对象)     2.Jquery">
+<meta name="keywords" content="java,jQuery,web">
+<meta property="og:type" content="article">
+<meta property="og:title" content="javaweb-jQuery">
+<meta property="og:url" content="http://yoursite.com/2018/05/17/javaweb-jQuery/index.html">
+<meta property="og:site_name">
+<meta property="og:description" content="Jquery基础学习Jquery的作用 Jquery是对常用方法的封装，方便我们使用。 Jquery的基本用法1.   获取一个jquery对象：$(&amp;quot;选择器&amp;quot;)或者jQuery(&amp;quot;选择器&amp;quot;)     注意如果是id # 2.   dom对象和jquery对象之间的转换：     1.dom对象转换jQuery对象：$(dom对象)     2.Jquery">
+<meta property="og:locale" content="zh-CN">
+<meta property="og:updated_time" content="2018-05-18T12:46:35.513Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="javaweb-jQuery">
+<meta name="twitter:description" content="Jquery基础学习Jquery的作用 Jquery是对常用方法的封装，方便我们使用。 Jquery的基本用法1.   获取一个jquery对象：$(&amp;quot;选择器&amp;quot;)或者jQuery(&amp;quot;选择器&amp;quot;)     注意如果是id # 2.   dom对象和jquery对象之间的转换：     1.dom对象转换jQuery对象：$(dom对象)     2.Jquery">
+    
+    <link rel="shortcut icon" href="/favicon.ico">
+    <link rel="stylesheet" href="//unpkg.com/hexo-theme-material-indigo@latest/css/style.css">
+    <script>window.lazyScripts=[]</script>
+
+    <!-- custom head -->
+    
+
+</head>
+
+<body>
+    <div id="loading" class="active"></div>
+
+    <aside id="menu" class="hide" >
+  <div class="inner flex-row-vertical">
+    <a href="javascript:;" class="header-icon waves-effect waves-circle waves-light" id="menu-off">
+        <i class="icon icon-lg icon-close"></i>
+    </a>
+    <div class="brand-wrap" style="background-image:url(/img/brand.jpg)">
+      <div class="brand">
+        <a href="/" class="avatar waves-effect waves-circle waves-light">
+          <img src="/img/avatar.jpg">
+        </a>
+        <hgroup class="introduce">
+          <h5 class="nickname">JiaZhiYuan</h5>
+          <a href="mailto:598424640@qq.com" title="598424640@qq.com" class="mail">598424640@qq.com</a>
+        </hgroup>
+      </div>
+    </div>
+    <div class="scroll-wrap flex-col">
+      <ul class="nav">
+        
+            <li class="waves-block waves-effect">
+              <a href="/"  >
+                <i class="icon icon-lg icon-home"></i>
+                主页
+              </a>
+            </li>
+        
+            <li class="waves-block waves-effect">
+              <a href="/archives"  >
+                <i class="icon icon-lg icon-archives"></i>
+                Archives
+              </a>
+            </li>
+        
+            <li class="waves-block waves-effect">
+              <a href="/tags"  >
+                <i class="icon icon-lg icon-tags"></i>
+                Tags
+              </a>
+            </li>
+        
+            <li class="waves-block waves-effect">
+              <a href="/categories"  >
+                <i class="icon icon-lg icon-th-list"></i>
+                Categories
+              </a>
+            </li>
+        
+            <li class="waves-block waves-effect">
+              <a href="https://github.com/jiazhiyuan1" target="_blank" >
+                <i class="icon icon-lg icon-github"></i>
+                Github
+              </a>
+            </li>
+        
+            <li class="waves-block waves-effect">
+              <a href="http://www.weibo.com/ysweb" target="_blank" >
+                <i class="icon icon-lg icon-weibo"></i>
+                Weibo
+              </a>
+            </li>
+        
+            <li class="waves-block waves-effect">
+              <a href="/custom"  >
+                <i class="icon icon-lg icon-link"></i>
+                测试
+              </a>
+            </li>
+        
+      </ul>
+    </div>
+  </div>
+</aside>
+
+    <main id="main">
+        <header class="top-header" id="header">
+    <div class="flex-row">
+        <a href="javascript:;" class="header-icon waves-effect waves-circle waves-light on" id="menu-toggle">
+          <i class="icon icon-lg icon-navicon"></i>
+        </a>
+        <div class="flex-col header-title ellipsis">javaweb-jQuery</div>
+        
+        <div class="search-wrap" id="search-wrap">
+            <a href="javascript:;" class="header-icon waves-effect waves-circle waves-light" id="back">
+                <i class="icon icon-lg icon-chevron-left"></i>
+            </a>
+            <input type="text" id="key" class="search-input" autocomplete="off" placeholder="输入感兴趣的关键字">
+            <a href="javascript:;" class="header-icon waves-effect waves-circle waves-light" id="search">
+                <i class="icon icon-lg icon-search"></i>
+            </a>
+        </div>
+        
+        
+        <a href="javascript:;" class="header-icon waves-effect waves-circle waves-light" id="menuShare">
+            <i class="icon icon-lg icon-share-alt"></i>
+        </a>
+        
+    </div>
+</header>
+<header class="content-header post-header">
+
+    <div class="container fade-scale">
+        <h1 class="title">javaweb-jQuery</h1>
+        <h5 class="subtitle">
+            
+                <time datetime="2018-05-17T14:36:05.000Z" itemprop="datePublished" class="page-time">
+  2018-05-17
+</time>
+
+
+	<ul class="article-category-list"><li class="article-category-list-item"><a class="article-category-list-link" href="/categories/javaweb/">javaweb</a></li></ul>
+
+            
+        </h5>
+    </div>
+
+    
+
+
+</header>
+
+
+<div class="container body-wrap">
+    
+    <aside class="post-widget">
+        <nav class="post-toc-wrap post-toc-shrink" id="post-toc">
+            <h4>TOC</h4>
+            <ol class="post-toc"><li class="post-toc-item post-toc-level-1"><a class="post-toc-link" href="#Jquery基础学习"><span class="post-toc-number">1.</span> <span class="post-toc-text">Jquery基础学习</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#Jquery的作用"><span class="post-toc-number">1.1.</span> <span class="post-toc-text">Jquery的作用</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#Jquery的基本用法"><span class="post-toc-number">1.2.</span> <span class="post-toc-text">Jquery的基本用法</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#jquery中效果"><span class="post-toc-number">1.3.</span> <span class="post-toc-text">jquery中效果</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#选择器总结"><span class="post-toc-number">1.4.</span> <span class="post-toc-text">选择器总结</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#基本选择器"><span class="post-toc-number">1.4.1.</span> <span class="post-toc-text">基本选择器</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#层次选择器"><span class="post-toc-number">1.4.2.</span> <span class="post-toc-text">层次选择器</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#内容过滤"><span class="post-toc-number">1.4.3.</span> <span class="post-toc-text">内容过滤:</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#可见过滤"><span class="post-toc-number">1.4.4.</span> <span class="post-toc-text">可见过滤</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#属性过滤器"><span class="post-toc-number">1.4.5.</span> <span class="post-toc-text">属性过滤器</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#表单过滤"><span class="post-toc-number">1.4.6.</span> <span class="post-toc-text">表单过滤</span></a></li></ol></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#属性和css操作总结"><span class="post-toc-number">1.5.</span> <span class="post-toc-text">属性和css操作总结</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#遍历数组"><span class="post-toc-number">1.6.</span> <span class="post-toc-text">遍历数组</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#获取值"><span class="post-toc-number">1.7.</span> <span class="post-toc-text">获取值</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#获取标签体的内容"><span class="post-toc-number">1.8.</span> <span class="post-toc-text">获取标签体的内容</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#文档操作"><span class="post-toc-number">1.9.</span> <span class="post-toc-text">文档操作:</span></a></li></ol></li></ol>
+        </nav>
+    </aside>
+
+
+<article id="post-javaweb-jQuery"
+  class="post-article article-type-post fade" itemprop="blogPost">
+
+    <div class="post-card">
+        <h1 class="post-card-title">javaweb-jQuery</h1>
+        <div class="post-meta">
+            <time class="post-time" title="2018-05-17 22:36:05" datetime="2018-05-17T14:36:05.000Z"  itemprop="datePublished">2018-05-17</time>
+
+            
+	<ul class="article-category-list"><li class="article-category-list-item"><a class="article-category-list-link" href="/categories/javaweb/">javaweb</a></li></ul>
+
+
+
+            
+<span id="busuanzi_container_page_pv" title="文章总阅读量" style='display:none'>
+    <i class="icon icon-eye icon-pr"></i><span id="busuanzi_value_page_pv"></span>
+</span>
+
+
+        </div>
+        <div class="post-content" id="post-content" itemprop="postContent">
+            <h1 id="Jquery基础学习"><a href="#Jquery基础学习" class="headerlink" title="Jquery基础学习"></a>Jquery基础学习</h1><h2 id="Jquery的作用"><a href="#Jquery的作用" class="headerlink" title="Jquery的作用"></a>Jquery的作用</h2><p> Jquery是对常用方法的封装，方便我们使用。</p>
+<h2 id="Jquery的基本用法"><a href="#Jquery的基本用法" class="headerlink" title="Jquery的基本用法"></a>Jquery的基本用法</h2><pre><code>1.   获取一个jquery对象：$(&quot;选择器&quot;)或者jQuery(&quot;选择器&quot;)     注意如果是id #
+2.   dom对象和jquery对象之间的转换：
+    1.dom对象转换jQuery对象：$(dom对象)
+    2.Jquery对象转换成dom对象：jquery对象.get(index)//jquery[index]
+3.页面加载
+    js：window.onload=function(){}在页面只能加载一次
+    jQuery：
+        方式1：$(function{})
+        方式2：$(document).ready(function(){});
+</code></pre><h2 id="jquery中效果"><a href="#jquery中效果" class="headerlink" title="jquery中效果"></a>jquery中效果</h2><pre><code>隐藏或者展示：show（毫秒数） 
+            hide（毫秒数）
+滑入或者滑出slideDown(毫秒数):向下滑入
+            slideUp(毫秒数):向上滑出
+淡入或淡出
+    fadeIn(int):淡入
+    fadeOut(int):淡出
+</code></pre><h2 id="选择器总结"><a href="#选择器总结" class="headerlink" title="选择器总结"></a>选择器总结</h2><h3 id="基本选择器"><a href="#基本选择器" class="headerlink" title="基本选择器"></a>基本选择器</h3><pre><code>$(&quot;#id&quot;),$(&quot;.class值&quot;),$(&quot;标签名&quot;)，$(*)获取全部
+获取多个选择器
+    $(&quot;div,#id&quot;)用逗号隔开
+</code></pre><h3 id="层次选择器"><a href="#层次选择器" class="headerlink" title="层次选择器"></a>层次选择器</h3><pre><code>a b: a后所有的后代
+a&gt;b: a的所有孩子
+a+b: a的下一个兄弟
+a~b: a的所有弟弟
+### 基本过滤器 ###
+：first 第一个
+    例子：$(&quot;div:first&quot;).css(&quot;backgroud-color&quot;,&quot;&quot;)
+    :last 最后一个
+    :odd  索引奇数
+    :even 索引偶数
+    :eq(index) 指定索引
+    :gt(index) &gt;
+    :lt(index) &lt;
+</code></pre><h3 id="内容过滤"><a href="#内容过滤" class="headerlink" title="内容过滤:"></a>内容过滤:</h3><pre><code>:has(&quot;选择器&quot;):包含指定选择器的元素
+</code></pre><h3 id="可见过滤"><a href="#可见过滤" class="headerlink" title="可见过滤"></a>可见过滤</h3><pre><code>:hidden   在页面不展示元素 一般指 input type=&quot;hidden&quot; 和 样式中display:none
+:visible
+</code></pre><h3 id="属性过滤器"><a href="#属性过滤器" class="headerlink" title="属性过滤器"></a>属性过滤器</h3><pre><code>[属性名]
+[属性名=&quot;值&quot;]
+</code></pre><h3 id="表单过滤"><a href="#表单过滤" class="headerlink" title="表单过滤"></a>表单过滤</h3><pre><code>:input  所有的表单子标签  input select textarea button
+</code></pre><h2 id="属性和css操作总结"><a href="#属性和css操作总结" class="headerlink" title="属性和css操作总结"></a>属性和css操作总结</h2><pre><code>对属性的操作：
+
+    attr（&quot;&quot;）获取属性的值
+    attr(&quot;&quot;,&quot;&quot;)给属性赋值
+    attr（
+        &quot;属性1&quot;:&quot;值&quot;,
+            &quot;属性2&quot;:&quot;值&quot;
+    ）
+    removeattr（&quot;属性名称&quot;） ：移除指定属性
+    添加class值
+    attr（&quot;class:&quot;,&quot;&quot;）;
+    addClass(&quot;指定样式的值&quot;);
+    removeClass(&quot;指定样式的值&quot;)
+对css操作：操作style属性
+    css（）
+    css（“”，“”）
+    css({
+        &quot;&quot;:&quot;&quot;,
+        &quot;&quot;:&quot;&quot;
+    })
+</code></pre><h2 id="遍历数组"><a href="#遍历数组" class="headerlink" title="遍历数组"></a>遍历数组</h2><pre><code>数组（jQuery对象）.each(function(){});
+$.each(数组，function(){});
+注意each中可以加两个参数index和dom
+    index 是当前遍历的缩引值，dom是当前遍历dom对象    
+</code></pre><h2 id="获取值"><a href="#获取值" class="headerlink" title="获取值"></a>获取值</h2><pre><code>jquer.val()//.valu(&quot;...&quot;)
+</code></pre><h2 id="获取标签体的内容"><a href="#获取标签体的内容" class="headerlink" title="获取标签体的内容"></a>获取标签体的内容</h2><pre><code>html（）
+text（）
+xxxx()获取
+xxxx(&quot;&quot;)设置
+    设置的区别 
+        html：自动把解析字符串
+        text：设置为普通的字符串
+    获取区别：
+            html获取html源码
+            text获取只是当前页面展示的内容
+</code></pre><h2 id="文档操作"><a href="#文档操作" class="headerlink" title="文档操作:"></a>文档操作:</h2><pre><code>内部插入
+    a.append(c):将c插入到a的内部(标签体)后面
+    a.prepend(c):将c插入到a的内部的前面
+
+    appendTo
+    prependTo
+外部插入
+    a.after(c):将c放到a的后面
+    a.before(c):将c放到a的前面
+
+    a.insertAfter(c)
+    a.insertBefore(c)
+删除
+    empty() 清空元素
+    remove() 删除元素
+</code></pre>
+        </div>
+
+        <blockquote class="post-copyright">
+    
+    <div class="content">
+        
+<span class="post-time">
+    最后更新时间：<time datetime="2018-05-18T12:46:35.513Z" itemprop="dateUpdated">2018-05-18 20:46:35</time>
+</span><br>
+
+
+        
+        这里可以写作者留言，标签和 hexo 中所有变量及辅助函数等均可调用，示例：<a href="/2018/05/17/javaweb-jQuery/" target="_blank" rel="external">http://yoursite.com/2018/05/17/javaweb-jQuery/</a>
+        
+    </div>
+    
+    <footer>
+        <a href="http://yoursite.com">
+            <img src="/img/avatar.jpg" alt="JiaZhiYuan">
+            JiaZhiYuan
+        </a>
+    </footer>
+</blockquote>
+
+        
+<div class="page-reward">
+    <a id="rewardBtn" href="javascript:;" class="page-reward-btn waves-effect waves-circle waves-light">赏</a>
+</div>
+
+
+
+        <div class="post-footer">
+            
+	<ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/jQuery/">jQuery</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/java/">java</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/web/">web</a></li></ul>
+
+
+            
+<div class="page-share-wrap">
+    
+
+<div class="page-share" id="pageShare">
+    <ul class="reset share-icons">
+      <li>
+        <a class="weibo share-sns" target="_blank" href="http://service.weibo.com/share/share.php?url=http://yoursite.com/2018/05/17/javaweb-jQuery/&title=《javaweb-jQuery》 — null&pic=http://yoursite.com/img/avatar.jpg" data-title="微博">
+          <i class="icon icon-weibo"></i>
+        </a>
+      </li>
+      <li>
+        <a class="weixin share-sns wxFab" href="javascript:;" data-title="微信">
+          <i class="icon icon-weixin"></i>
+        </a>
+      </li>
+      <li>
+        <a class="qq share-sns" target="_blank" href="http://connect.qq.com/widget/shareqq/index.html?url=http://yoursite.com/2018/05/17/javaweb-jQuery/&title=《javaweb-jQuery》 — null&source=Welcome to LaoJia's blog" data-title=" QQ">
+          <i class="icon icon-qq"></i>
+        </a>
+      </li>
+      <li>
+        <a class="facebook share-sns" target="_blank" href="https://www.facebook.com/sharer/sharer.php?u=http://yoursite.com/2018/05/17/javaweb-jQuery/" data-title=" Facebook">
+          <i class="icon icon-facebook"></i>
+        </a>
+      </li>
+      <li>
+        <a class="twitter share-sns" target="_blank" href="https://twitter.com/intent/tweet?text=《javaweb-jQuery》 — null&url=http://yoursite.com/2018/05/17/javaweb-jQuery/&via=http://yoursite.com" data-title=" Twitter">
+          <i class="icon icon-twitter"></i>
+        </a>
+      </li>
+      <li>
+        <a class="google share-sns" target="_blank" href="https://plus.google.com/share?url=http://yoursite.com/2018/05/17/javaweb-jQuery/" data-title=" Google+">
+          <i class="icon icon-google-plus"></i>
+        </a>
+      </li>
+    </ul>
+ </div>
+
+
+
+    <a href="javascript:;" id="shareFab" class="page-share-fab waves-effect waves-circle">
+        <i class="icon icon-share-alt icon-lg"></i>
+    </a>
+</div>
+
+
+
+        </div>
+    </div>
+
+    
+<nav class="post-nav flex-row flex-justify-between flex-row-reverse">
+  
+
+  
+    <div class="waves-block waves-effect next">
+      <a href="/2018/05/10/javaweb-初次緩存技術/" id="post-next" class="post-nav-link">
+        <div class="tips">Next <i class="icon icon-angle-right icon-lg icon-pl"></i></div>
+        <h4 class="title">javaweb-缓存技术 </h4>
+      </a>
+    </div>
+  
+</nav>
+
+
+
+    
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</article>
+
+<div id="reward" class="page-modal reward-lay">
+    <a class="close" href="javascript:;"><i class="icon icon-close"></i></a>
+    <h3 class="reward-title">
+        <i class="icon icon-quote-left"></i>
+        扎心了,老铁！
+        <i class="icon icon-quote-right"></i>
+    </h3>
+    <div class="reward-content">
+        
+        <div class="reward-code">
+            <img id="rewardCode" src="/img/wechat.jpg" alt="打赏二维码">
+        </div>
+        
+        <label class="reward-toggle">
+            <input id="rewardToggle" type="checkbox" class="reward-toggle-check"
+                data-wechat="/img/wechat.jpg" data-alipay="/img/alipay.jpg">
+            <div class="reward-toggle-ctrol">
+                <span class="reward-toggle-item wechat">微信</span>
+                <span class="reward-toggle-label"></span>
+                <span class="reward-toggle-item alipay">支付宝</span>
+            </div>
+        </label>
+        
+    </div>
+</div>
+
+
+
+</div>
+
+        <footer class="footer">
+    <div class="top">
+        
+<p>
+    <span id="busuanzi_container_site_uv" style='display:none'>
+        站点总访客数：<span id="busuanzi_value_site_uv"></span>
+    </span>
+    <span id="busuanzi_container_site_pv" style='display:none'>
+        站点总访问量：<span id="busuanzi_value_site_pv"></span>
+    </span>
+</p>
+
+
+        <p>
+            
+            <span>博客内容遵循 <a rel="license" href="https://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh">知识共享 署名 - 非商业性 - 相同方式共享 4.0 国际协议</a></span>
+        </p>
+    </div>
+    <div class="bottom">
+        <p><span>JiaZhiYuan &copy; 2015 - 2018</span>
+            <span>
+                
+                Power by <a href="http://hexo.io/" target="_blank">Hexo</a> Theme <a href="https://github.com/yscoder/hexo-theme-indigo" target="_blank">indigo</a>
+            </span>
+        </p>
+    </div>
+</footer>
+
+    </main>
+    <div class="mask" id="mask"></div>
+<a href="javascript:;" id="gotop" class="waves-effect waves-circle waves-light"><span class="icon icon-lg icon-chevron-up"></span></a>
+
+
+
+<div class="global-share" id="globalShare">
+    <ul class="reset share-icons">
+      <li>
+        <a class="weibo share-sns" target="_blank" href="http://service.weibo.com/share/share.php?url=http://yoursite.com/2018/05/17/javaweb-jQuery/&title=《javaweb-jQuery》 — null&pic=http://yoursite.com/img/avatar.jpg" data-title="微博">
+          <i class="icon icon-weibo"></i>
+        </a>
+      </li>
+      <li>
+        <a class="weixin share-sns wxFab" href="javascript:;" data-title="微信">
+          <i class="icon icon-weixin"></i>
+        </a>
+      </li>
+      <li>
+        <a class="qq share-sns" target="_blank" href="http://connect.qq.com/widget/shareqq/index.html?url=http://yoursite.com/2018/05/17/javaweb-jQuery/&title=《javaweb-jQuery》 — null&source=Welcome to LaoJia's blog" data-title=" QQ">
+          <i class="icon icon-qq"></i>
+        </a>
+      </li>
+      <li>
+        <a class="facebook share-sns" target="_blank" href="https://www.facebook.com/sharer/sharer.php?u=http://yoursite.com/2018/05/17/javaweb-jQuery/" data-title=" Facebook">
+          <i class="icon icon-facebook"></i>
+        </a>
+      </li>
+      <li>
+        <a class="twitter share-sns" target="_blank" href="https://twitter.com/intent/tweet?text=《javaweb-jQuery》 — null&url=http://yoursite.com/2018/05/17/javaweb-jQuery/&via=http://yoursite.com" data-title=" Twitter">
+          <i class="icon icon-twitter"></i>
+        </a>
+      </li>
+      <li>
+        <a class="google share-sns" target="_blank" href="https://plus.google.com/share?url=http://yoursite.com/2018/05/17/javaweb-jQuery/" data-title=" Google+">
+          <i class="icon icon-google-plus"></i>
+        </a>
+      </li>
+    </ul>
+ </div>
+
+
+<div class="page-modal wx-share" id="wxShare">
+    <a class="close" href="javascript:;"><i class="icon icon-close"></i></a>
+    <p>扫一扫，分享到微信</p>
+    <img src="//api.qrserver.com/v1/create-qr-code/?data=http://yoursite.com/2018/05/17/javaweb-jQuery/" alt="微信分享二维码">
+</div>
+
+
+
+
+    <script src="//cdn.bootcss.com/node-waves/0.7.4/waves.min.js"></script>
+<script>
+var BLOG = { ROOT: '/', SHARE: true, REWARD: true };
+
+
+</script>
+
+<script src="//unpkg.com/hexo-theme-material-indigo@latest/js/main.min.js"></script>
+
+
+<div class="search-panel" id="search-panel">
+    <ul class="search-result" id="search-result"></ul>
+</div>
+<template id="search-tpl">
+<li class="item">
+    <a href="{path}" class="waves-block waves-effect">
+        <div class="title ellipsis" title="{title}">{title}</div>
+        <div class="flex-row flex-middle">
+            <div class="tags ellipsis">
+                {tags}
+            </div>
+            <time class="flex-col time">{date}</time>
+        </div>
+    </a>
+</li>
+</template>
+
+<script src="//unpkg.com/hexo-theme-material-indigo@latest/js/search.min.js" async></script>
+
+
+
+
+
+
+<script async src="//dn-lbstatics.qbox.me/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+
+
+
+<script>
+(function() {
+    var OriginTitile = document.title, titleTime;
+    document.addEventListener('visibilitychange', function() {
+        if (document.hidden) {
+            document.title = '死鬼去哪里了！';
+            clearTimeout(titleTime);
+        } else {
+            document.title = '(つェ⊂)咦!又好了!';
+            titleTime = setTimeout(function() {
+                document.title = OriginTitile;
+            },2000);
+        }
+    });
+})();
+</script>
+
+
+
+</body>
+</html>
