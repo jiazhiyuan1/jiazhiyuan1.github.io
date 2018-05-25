@@ -19,19 +19,19 @@
     <meta name="theme-color" content="#3F51B5">
     
     
-    <meta name="keywords" content="设计模式">
-    <meta name="description" content="Welcome to LaoJia&apos;s blog">
-<meta name="keywords" content="设计模式">
+    <meta name="keywords" content="设计模式，装饰者模式">
+    <meta name="description" content="装饰者模式定义`    1.装饰者和被装饰者实现同一个接口或者继承同一个类     2.装饰者中要有被装饰者的引用     3.对需要增强的方法进行加强     4.对不需要加强的方法调用原来方法` 代码实现共同的接口public interface car{     void run();     void stop();  } 被装饰者public class Siyu implement c">
+<meta name="keywords" content="设计模式，装饰者模式">
 <meta property="og:type" content="article">
 <meta property="og:title" content="设计模式-装饰者模式">
 <meta property="og:url" content="http://yoursite.com/2018/04/29/设计模式-装饰者模式/index.html">
 <meta property="og:site_name">
-<meta property="og:description" content="Welcome to LaoJia&apos;s blog">
+<meta property="og:description" content="装饰者模式定义`    1.装饰者和被装饰者实现同一个接口或者继承同一个类     2.装饰者中要有被装饰者的引用     3.对需要增强的方法进行加强     4.对不需要加强的方法调用原来方法` 代码实现共同的接口public interface car{     void run();     void stop();  } 被装饰者public class Siyu implement c">
 <meta property="og:locale" content="zh-CN">
-<meta property="og:updated_time" content="2018-05-02T15:48:26.677Z">
+<meta property="og:updated_time" content="2018-05-18T16:01:46.127Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="设计模式-装饰者模式">
-<meta name="twitter:description" content="Welcome to LaoJia&apos;s blog">
+<meta name="twitter:description" content="装饰者模式定义`    1.装饰者和被装饰者实现同一个接口或者继承同一个类     2.装饰者中要有被装饰者的引用     3.对需要增强的方法进行加强     4.对不需要加强的方法调用原来方法` 代码实现共同的接口public interface car{     void run();     void stop();  } 被装饰者public class Siyu implement c">
     
     <link rel="shortcut icon" href="/favicon.ico">
     <link rel="stylesheet" href="//unpkg.com/hexo-theme-material-indigo@latest/css/style.css">
@@ -168,6 +168,13 @@
 
 <div class="container body-wrap">
     
+    <aside class="post-widget">
+        <nav class="post-toc-wrap post-toc-shrink" id="post-toc">
+            <h4>TOC</h4>
+            <ol class="post-toc"><li class="post-toc-item post-toc-level-1"><a class="post-toc-link" href="#装饰者模式"><span class="post-toc-number">1.</span> <span class="post-toc-text">装饰者模式</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#定义"><span class="post-toc-number">1.1.</span> <span class="post-toc-text">定义</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#代码实现"><span class="post-toc-number">1.2.</span> <span class="post-toc-text">代码实现</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#共同的接口"><span class="post-toc-number">1.2.1.</span> <span class="post-toc-text">共同的接口</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#被装饰者"><span class="post-toc-number">1.2.2.</span> <span class="post-toc-text">被装饰者</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#装饰者"><span class="post-toc-number">1.2.3.</span> <span class="post-toc-text">装饰者</span></a></li></ol></li></ol></li></ol>
+        </nav>
+    </aside>
+
 
 <article id="post-设计模式-装饰者模式"
   class="post-article article-type-post fade" itemprop="blogPost">
@@ -190,7 +197,36 @@
 
         </div>
         <div class="post-content" id="post-content" itemprop="postContent">
-            
+            <h1 id="装饰者模式"><a href="#装饰者模式" class="headerlink" title="装饰者模式"></a>装饰者模式</h1><h2 id="定义"><a href="#定义" class="headerlink" title="定义"></a>定义</h2><pre><code>`    1.装饰者和被装饰者实现同一个接口或者继承同一个类
+    2.装饰者中要有被装饰者的引用
+    3.对需要增强的方法进行加强
+    4.对不需要加强的方法调用原来方法`
+</code></pre><h2 id="代码实现"><a href="#代码实现" class="headerlink" title="代码实现"></a>代码实现</h2><h3 id="共同的接口"><a href="#共同的接口" class="headerlink" title="共同的接口"></a>共同的接口</h3><pre><code>public interface car{
+    void run();
+    void stop();
+
+}
+</code></pre><h3 id="被装饰者"><a href="#被装饰者" class="headerlink" title="被装饰者"></a>被装饰者</h3><pre><code>public class Siyu implement car（）{
+    public  void run（）{
+        syso(&quot;红标思域跑的贼慢&quot;)；
+    }
+    public void stop（）{
+        syso(&quot;稳稳刹住车&quot;)；
+    }
+}
+</code></pre><h3 id="装饰者"><a href="#装饰者" class="headerlink" title="装饰者"></a>装饰者</h3><pre><code>public class SiyuWrapper(){
+    private Siyu siyu;
+    public SiyuWrapper(Siyu siyu){
+            this.siyu=siyu
+    }
+    public void run(){
+        syso(&quot;改装后，秒杀600万以下车！&quot;)；
+    }
+    public void stop(){
+        syso(&quot;稳稳刹车&quot;)；
+    }
+}
+</code></pre>
         </div>
 
         <blockquote class="post-copyright">
@@ -198,7 +234,7 @@
     <div class="content">
         
 <span class="post-time">
-    最后更新时间：<time datetime="2018-05-02T15:48:26.677Z" itemprop="dateUpdated">2018-05-02 23:48:26</time>
+    最后更新时间：<time datetime="2018-05-18T16:01:46.127Z" itemprop="dateUpdated">2018-05-19 00:01:46</time>
 </span><br>
 
 
@@ -224,7 +260,7 @@
 
         <div class="post-footer">
             
-	<ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/设计模式/">设计模式</a></li></ul>
+	<ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/设计模式，装饰者模式/">设计模式，装饰者模式</a></li></ul>
 
 
             

@@ -1,0 +1,622 @@
+<!DOCTYPE html>
+<html>
+<head>
+    
+
+    
+
+    
+
+
+
+    <meta charset="utf-8">
+    
+    
+    
+    <title>javaee基础xml语言 | </title>
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    
+    <meta name="theme-color" content="#3F51B5">
+    
+    
+    <meta name="keywords" content="javaweb,xml">
+    <meta name="description" content="xml基础基础运用xml解析xml的解析方式 sax：特点：逐行解析，只能查询。 dom: 特点：一次性将文档加载到内容中，形成dom树。可以对dom树curd操作。xml解析技术dom4j   比较常用的解析开发包，hibernate底层采用。 利用dom4j完成查询操作 配置相应的文件 创建核心对象new SAXReader(); 将xml文档加载到内存形成一棵树Document doc =">
+<meta name="keywords" content="javaweb,xml">
+<meta property="og:type" content="article">
+<meta property="og:title" content="javaee基础xml语言">
+<meta property="og:url" content="http://yoursite.com/2018/05/19/javaweb-基础xml语言/index.html">
+<meta property="og:site_name">
+<meta property="og:description" content="xml基础基础运用xml解析xml的解析方式 sax：特点：逐行解析，只能查询。 dom: 特点：一次性将文档加载到内容中，形成dom树。可以对dom树curd操作。xml解析技术dom4j   比较常用的解析开发包，hibernate底层采用。 利用dom4j完成查询操作 配置相应的文件 创建核心对象new SAXReader(); 将xml文档加载到内存形成一棵树Document doc =">
+<meta property="og:locale" content="zh-CN">
+<meta property="og:updated_time" content="2018-05-19T10:00:00.553Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="javaee基础xml语言">
+<meta name="twitter:description" content="xml基础基础运用xml解析xml的解析方式 sax：特点：逐行解析，只能查询。 dom: 特点：一次性将文档加载到内容中，形成dom树。可以对dom树curd操作。xml解析技术dom4j   比较常用的解析开发包，hibernate底层采用。 利用dom4j完成查询操作 配置相应的文件 创建核心对象new SAXReader(); 将xml文档加载到内存形成一棵树Document doc =">
+    
+    <link rel="shortcut icon" href="/favicon.ico">
+    <link rel="stylesheet" href="//unpkg.com/hexo-theme-material-indigo@latest/css/style.css">
+    <script>window.lazyScripts=[]</script>
+
+    <!-- custom head -->
+    
+
+</head>
+
+<body>
+    <div id="loading" class="active"></div>
+
+    <aside id="menu" class="hide" >
+  <div class="inner flex-row-vertical">
+    <a href="javascript:;" class="header-icon waves-effect waves-circle waves-light" id="menu-off">
+        <i class="icon icon-lg icon-close"></i>
+    </a>
+    <div class="brand-wrap" style="background-image:url(/img/brand.jpg)">
+      <div class="brand">
+        <a href="/" class="avatar waves-effect waves-circle waves-light">
+          <img src="/img/avatar.jpg">
+        </a>
+        <hgroup class="introduce">
+          <h5 class="nickname">JiaZhiYuan</h5>
+          <a href="mailto:598424640@qq.com" title="598424640@qq.com" class="mail">598424640@qq.com</a>
+        </hgroup>
+      </div>
+    </div>
+    <div class="scroll-wrap flex-col">
+      <ul class="nav">
+        
+            <li class="waves-block waves-effect">
+              <a href="/"  >
+                <i class="icon icon-lg icon-home"></i>
+                主页
+              </a>
+            </li>
+        
+            <li class="waves-block waves-effect">
+              <a href="/archives"  >
+                <i class="icon icon-lg icon-archives"></i>
+                Archives
+              </a>
+            </li>
+        
+            <li class="waves-block waves-effect">
+              <a href="/tags"  >
+                <i class="icon icon-lg icon-tags"></i>
+                Tags
+              </a>
+            </li>
+        
+            <li class="waves-block waves-effect">
+              <a href="/categories"  >
+                <i class="icon icon-lg icon-th-list"></i>
+                Categories
+              </a>
+            </li>
+        
+            <li class="waves-block waves-effect">
+              <a href="https://github.com/jiazhiyuan1" target="_blank" >
+                <i class="icon icon-lg icon-github"></i>
+                Github
+              </a>
+            </li>
+        
+            <li class="waves-block waves-effect">
+              <a href="http://www.weibo.com/ysweb" target="_blank" >
+                <i class="icon icon-lg icon-weibo"></i>
+                Weibo
+              </a>
+            </li>
+        
+            <li class="waves-block waves-effect">
+              <a href="/custom"  >
+                <i class="icon icon-lg icon-link"></i>
+                测试
+              </a>
+            </li>
+        
+      </ul>
+    </div>
+  </div>
+</aside>
+
+    <main id="main">
+        <header class="top-header" id="header">
+    <div class="flex-row">
+        <a href="javascript:;" class="header-icon waves-effect waves-circle waves-light on" id="menu-toggle">
+          <i class="icon icon-lg icon-navicon"></i>
+        </a>
+        <div class="flex-col header-title ellipsis">javaee基础xml语言</div>
+        
+        <div class="search-wrap" id="search-wrap">
+            <a href="javascript:;" class="header-icon waves-effect waves-circle waves-light" id="back">
+                <i class="icon icon-lg icon-chevron-left"></i>
+            </a>
+            <input type="text" id="key" class="search-input" autocomplete="off" placeholder="输入感兴趣的关键字">
+            <a href="javascript:;" class="header-icon waves-effect waves-circle waves-light" id="search">
+                <i class="icon icon-lg icon-search"></i>
+            </a>
+        </div>
+        
+        
+        <a href="javascript:;" class="header-icon waves-effect waves-circle waves-light" id="menuShare">
+            <i class="icon icon-lg icon-share-alt"></i>
+        </a>
+        
+    </div>
+</header>
+<header class="content-header post-header">
+
+    <div class="container fade-scale">
+        <h1 class="title">javaee基础xml语言</h1>
+        <h5 class="subtitle">
+            
+                <time datetime="2018-05-19T09:08:55.000Z" itemprop="datePublished" class="page-time">
+  2018-05-19
+</time>
+
+
+	<ul class="article-category-list"><li class="article-category-list-item"><a class="article-category-list-link" href="/categories/javaweb/">javaweb</a></li></ul>
+
+            
+        </h5>
+    </div>
+
+    
+
+
+</header>
+
+
+<div class="container body-wrap">
+    
+    <aside class="post-widget">
+        <nav class="post-toc-wrap post-toc-shrink" id="post-toc">
+            <h4>TOC</h4>
+            <ol class="post-toc"><li class="post-toc-item post-toc-level-1"><a class="post-toc-link" href="#xml基础基础运用"><span class="post-toc-number">1.</span> <span class="post-toc-text">xml基础基础运用</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#xml解析"><span class="post-toc-number">1.1.</span> <span class="post-toc-text">xml解析</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#xml的解析方式"><span class="post-toc-number">1.1.1.</span> <span class="post-toc-text">xml的解析方式</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#xml解析技术dom4j"><span class="post-toc-number">1.1.2.</span> <span class="post-toc-text">xml解析技术dom4j</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#复习一下反射的技术"><span class="post-toc-number">1.1.3.</span> <span class="post-toc-text">复习一下反射的技术</span></a></li></ol></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#xml的约束"><span class="post-toc-number">1.2.</span> <span class="post-toc-text">xml的约束</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#SCHEMA约束"><span class="post-toc-number">1.3.</span> <span class="post-toc-text">SCHEMA约束</span></a></li></ol></li></ol>
+        </nav>
+    </aside>
+
+
+<article id="post-javaweb-基础xml语言"
+  class="post-article article-type-post fade" itemprop="blogPost">
+
+    <div class="post-card">
+        <h1 class="post-card-title">javaee基础xml语言</h1>
+        <div class="post-meta">
+            <time class="post-time" title="2018-05-19 17:08:55" datetime="2018-05-19T09:08:55.000Z"  itemprop="datePublished">2018-05-19</time>
+
+            
+	<ul class="article-category-list"><li class="article-category-list-item"><a class="article-category-list-link" href="/categories/javaweb/">javaweb</a></li></ul>
+
+
+
+            
+<span id="busuanzi_container_page_pv" title="文章总阅读量" style='display:none'>
+    <i class="icon icon-eye icon-pr"></i><span id="busuanzi_value_page_pv"></span>
+</span>
+
+
+        </div>
+        <div class="post-content" id="post-content" itemprop="postContent">
+            <h1 id="xml基础基础运用"><a href="#xml基础基础运用" class="headerlink" title="xml基础基础运用"></a>xml基础基础运用</h1><h2 id="xml解析"><a href="#xml解析" class="headerlink" title="xml解析"></a>xml解析</h2><h3 id="xml的解析方式"><a href="#xml的解析方式" class="headerlink" title="xml的解析方式"></a>xml的解析方式</h3><ol>
+<li>sax：特点：逐行解析，只能查询。</li>
+<li>dom: 特点：一次性将文档加载到内容中，形成dom树。可以对dom树curd操作。<h3 id="xml解析技术dom4j"><a href="#xml解析技术dom4j" class="headerlink" title="xml解析技术dom4j"></a>xml解析技术dom4j</h3></li>
+</ol>
+<ul>
+<li>比较常用的解析开发包，hibernate底层采用。</li>
+<li>利用dom4j完成查询操作<ul>
+<li>配置相应的文件</li>
+<li>创建核心对象new SAXReader();</li>
+<li>将xml文档加载到内存形成一棵树<br>Document doc =   reader.read(文件的位值)</li>
+<li>通过文档获取根节点<br>Elemnt root=doc.getRootElement();</li>
+<li>通过根节点获取其他的节点的元素<ul>
+<li>获取所有的子元素<br>List<element> list=root.elements()</element></li>
+<li>获取元素的指定属性内容<br>String value=root.attributeValue(“属性名”);</li>
+<li>获取子标签标签体:遍历list 获取到每一个子元素<br>String text=ele.elementText(“子标签名称”)<h3 id="复习一下反射的技术"><a href="#复习一下反射的技术" class="headerlink" title="复习一下反射的技术"></a>复习一下反射的技术</h3></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<ol>
+<li>获取对应的class 对象<ul>
+<li>方式1：<ul>
+<li>class clazz=Class.formName()</li>
+</ul>
+</li>
+<li>方式2：<ul>
+<li>Class clazz=类名.class;</li>
+</ul>
+</li>
+<li>方式3：<ul>
+<li>Class clazz=对象.getclass();</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>通过字节码对象获取实例对象<ul>
+<li>Object clazz.newInstance(); 相当于new了一个对象</li>
+</ul>
+</li>
+<li>通过class对象获取public方法<ul>
+<li>Method method= clazz.getmethod(“方法名字”，Class…paramType)；例如int.class</li>
+</ul>
+</li>
+<li>让方法执行<ul>
+<li>method.invoke（object 实例对象，object…参数）；<br>a.add(10)相当于 method.invoke(a,10);</li>
+</ul>
+</li>
+</ol>
+<h2 id="xml的约束"><a href="#xml的约束" class="headerlink" title="xml的约束"></a>xml的约束</h2><ul>
+<li>作用 ：规定xml中可以出现那些元素及那些属性，以及他们出现的顺序。</li>
+<li>约束的分类：<ul>
+<li>DTD约束：strust hiebernate等</li>
+<li>SCHEMA约束： tomact spring等</li>
+</ul>
+</li>
+</ul>
+<ol>
+<li>DTD约束：<ul>
+<li>和xml的关联    (一般都会提供好,复制过来即可,有时候连复制都不需要.)<ul>
+<li>方式1:内部关联<ul>
+<li>格式:<br>  &lt;!DOCTYPE 根元素名 [dtd语法]&gt;</li>
+</ul>
+</li>
+<li>方式2:外部关联-系统关联<ul>
+<li>格式:<br>  &lt;!DOCTYPE 根元素名 SYSTEM “约束文件的位置”&gt;</li>
+<li>例如:<br>  &lt;!DOCTYPE web-app SYSTEM “web-app_2_3.dtd”&gt;</li>
+</ul>
+</li>
+<li>方式3:外部关联-公共关联<ul>
+<li>格式:<br>  &lt;!DOCTYPE 根元素名 PUBLIC “约束文件的名称” “约束文件的位置”&gt;</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li><p>DTD语法了解</p>
+<ul>
+<li><p>元素:</p>
+<ul>
+<li>&lt;!Element 元素名称 数据类型|包含内容&gt;</li>
+<li>数据类型:<pre><code>#PCDATA:普通文本 使用的时候一般用()引起来
+</code></pre><ul>
+<li>包含内容:<br>  该元素下可以出现那些元素 用()引起来</li>
+</ul>
+</li>
+<li>符号:<ul>
+<li><ul>
+<li>出现任意次</li>
+</ul>
+</li>
+<li>?    出现1次或者0次</li>
+<li><ul>
+<li>出现至少1次</li>
+</ul>
+</li>
+<li>|    或者</li>
+<li>()  分组</li>
+<li>,    顺序</li>
+</ul>
+</li>
+</ul>
+</li>
+<li><p>属性:</p>
+<ul>
+<li>格式:<br>  &lt;!ATTLIST 元素名 属性名 属性类型 属性是否必须出现&gt;</li>
+<li>属性类型:<br>  ID:唯一<br>  CDATA:普通文本</li>
+<li>属性是否必须出现<br>  REQUIRED:必须出现<br>  IMPLIED:可以不出现</li>
+</ul>
+</li>
+</ul>
+</li>
+</ol>
+<p><strong>一个xml文档中只能添加一个DTD约束</strong></p>
+<h2 id="SCHEMA约束"><a href="#SCHEMA约束" class="headerlink" title="SCHEMA约束"></a>SCHEMA约束</h2><ul>
+<li>一个xml文档中可以添加多个schema约束</li>
+<li>xml和schema的关联<ul>
+<li>格式：<br>  &lt;根标签 xmlns=”….”….&gt;<br>  &lt;根标签 xmlns:别名=”….”….&gt;    </li>
+<li>通过别名区分不同的约束</li>
+</ul>
+</li>
+<li>schema约束本身也是xml文件.<ul>
+<li>spring自身就是用的schema</li>
+</ul>
+</li>
+</ul>
+
+        </div>
+
+        <blockquote class="post-copyright">
+    
+    <div class="content">
+        
+<span class="post-time">
+    最后更新时间：<time datetime="2018-05-19T10:00:00.553Z" itemprop="dateUpdated">2018-05-19 18:00:00</time>
+</span><br>
+
+
+        
+        这里可以写作者留言，标签和 hexo 中所有变量及辅助函数等均可调用，示例：<a href="/2018/05/19/javaweb-基础xml语言/" target="_blank" rel="external">http://yoursite.com/2018/05/19/javaweb-基础xml语言/</a>
+        
+    </div>
+    
+    <footer>
+        <a href="http://yoursite.com">
+            <img src="/img/avatar.jpg" alt="JiaZhiYuan">
+            JiaZhiYuan
+        </a>
+    </footer>
+</blockquote>
+
+        
+<div class="page-reward">
+    <a id="rewardBtn" href="javascript:;" class="page-reward-btn waves-effect waves-circle waves-light">赏</a>
+</div>
+
+
+
+        <div class="post-footer">
+            
+	<ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/javaweb/">javaweb</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/xml/">xml</a></li></ul>
+
+
+            
+<div class="page-share-wrap">
+    
+
+<div class="page-share" id="pageShare">
+    <ul class="reset share-icons">
+      <li>
+        <a class="weibo share-sns" target="_blank" href="http://service.weibo.com/share/share.php?url=http://yoursite.com/2018/05/19/javaweb-基础xml语言/&title=《javaee基础xml语言》 — null&pic=http://yoursite.com/img/avatar.jpg" data-title="微博">
+          <i class="icon icon-weibo"></i>
+        </a>
+      </li>
+      <li>
+        <a class="weixin share-sns wxFab" href="javascript:;" data-title="微信">
+          <i class="icon icon-weixin"></i>
+        </a>
+      </li>
+      <li>
+        <a class="qq share-sns" target="_blank" href="http://connect.qq.com/widget/shareqq/index.html?url=http://yoursite.com/2018/05/19/javaweb-基础xml语言/&title=《javaee基础xml语言》 — null&source=Welcome to LaoJia's blog" data-title=" QQ">
+          <i class="icon icon-qq"></i>
+        </a>
+      </li>
+      <li>
+        <a class="facebook share-sns" target="_blank" href="https://www.facebook.com/sharer/sharer.php?u=http://yoursite.com/2018/05/19/javaweb-基础xml语言/" data-title=" Facebook">
+          <i class="icon icon-facebook"></i>
+        </a>
+      </li>
+      <li>
+        <a class="twitter share-sns" target="_blank" href="https://twitter.com/intent/tweet?text=《javaee基础xml语言》 — null&url=http://yoursite.com/2018/05/19/javaweb-基础xml语言/&via=http://yoursite.com" data-title=" Twitter">
+          <i class="icon icon-twitter"></i>
+        </a>
+      </li>
+      <li>
+        <a class="google share-sns" target="_blank" href="https://plus.google.com/share?url=http://yoursite.com/2018/05/19/javaweb-基础xml语言/" data-title=" Google+">
+          <i class="icon icon-google-plus"></i>
+        </a>
+      </li>
+    </ul>
+ </div>
+
+
+
+    <a href="javascript:;" id="shareFab" class="page-share-fab waves-effect waves-circle">
+        <i class="icon icon-share-alt icon-lg"></i>
+    </a>
+</div>
+
+
+
+        </div>
+    </div>
+
+    
+<nav class="post-nav flex-row flex-justify-between">
+  
+    <div class="waves-block waves-effect prev">
+      <a href="/2018/05/21/初识servlet/" id="post-prev" class="post-nav-link">
+        <div class="tips"><i class="icon icon-angle-left icon-lg icon-pr"></i> Prev</div>
+        <h4 class="title">初识servlet</h4>
+      </a>
+    </div>
+  
+
+  
+    <div class="waves-block waves-effect next">
+      <a href="/2018/05/17/javaweb-jQuery/" id="post-next" class="post-nav-link">
+        <div class="tips">Next <i class="icon icon-angle-right icon-lg icon-pl"></i></div>
+        <h4 class="title">javaweb-jQuery</h4>
+      </a>
+    </div>
+  
+</nav>
+
+
+
+    
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</article>
+
+<div id="reward" class="page-modal reward-lay">
+    <a class="close" href="javascript:;"><i class="icon icon-close"></i></a>
+    <h3 class="reward-title">
+        <i class="icon icon-quote-left"></i>
+        扎心了,老铁！
+        <i class="icon icon-quote-right"></i>
+    </h3>
+    <div class="reward-content">
+        
+        <div class="reward-code">
+            <img id="rewardCode" src="/img/wechat.jpg" alt="打赏二维码">
+        </div>
+        
+        <label class="reward-toggle">
+            <input id="rewardToggle" type="checkbox" class="reward-toggle-check"
+                data-wechat="/img/wechat.jpg" data-alipay="/img/alipay.jpg">
+            <div class="reward-toggle-ctrol">
+                <span class="reward-toggle-item wechat">微信</span>
+                <span class="reward-toggle-label"></span>
+                <span class="reward-toggle-item alipay">支付宝</span>
+            </div>
+        </label>
+        
+    </div>
+</div>
+
+
+
+</div>
+
+        <footer class="footer">
+    <div class="top">
+        
+<p>
+    <span id="busuanzi_container_site_uv" style='display:none'>
+        站点总访客数：<span id="busuanzi_value_site_uv"></span>
+    </span>
+    <span id="busuanzi_container_site_pv" style='display:none'>
+        站点总访问量：<span id="busuanzi_value_site_pv"></span>
+    </span>
+</p>
+
+
+        <p>
+            
+            <span>博客内容遵循 <a rel="license" href="https://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh">知识共享 署名 - 非商业性 - 相同方式共享 4.0 国际协议</a></span>
+        </p>
+    </div>
+    <div class="bottom">
+        <p><span>JiaZhiYuan &copy; 2015 - 2018</span>
+            <span>
+                
+                Power by <a href="http://hexo.io/" target="_blank">Hexo</a> Theme <a href="https://github.com/yscoder/hexo-theme-indigo" target="_blank">indigo</a>
+            </span>
+        </p>
+    </div>
+</footer>
+
+    </main>
+    <div class="mask" id="mask"></div>
+<a href="javascript:;" id="gotop" class="waves-effect waves-circle waves-light"><span class="icon icon-lg icon-chevron-up"></span></a>
+
+
+
+<div class="global-share" id="globalShare">
+    <ul class="reset share-icons">
+      <li>
+        <a class="weibo share-sns" target="_blank" href="http://service.weibo.com/share/share.php?url=http://yoursite.com/2018/05/19/javaweb-基础xml语言/&title=《javaee基础xml语言》 — null&pic=http://yoursite.com/img/avatar.jpg" data-title="微博">
+          <i class="icon icon-weibo"></i>
+        </a>
+      </li>
+      <li>
+        <a class="weixin share-sns wxFab" href="javascript:;" data-title="微信">
+          <i class="icon icon-weixin"></i>
+        </a>
+      </li>
+      <li>
+        <a class="qq share-sns" target="_blank" href="http://connect.qq.com/widget/shareqq/index.html?url=http://yoursite.com/2018/05/19/javaweb-基础xml语言/&title=《javaee基础xml语言》 — null&source=Welcome to LaoJia's blog" data-title=" QQ">
+          <i class="icon icon-qq"></i>
+        </a>
+      </li>
+      <li>
+        <a class="facebook share-sns" target="_blank" href="https://www.facebook.com/sharer/sharer.php?u=http://yoursite.com/2018/05/19/javaweb-基础xml语言/" data-title=" Facebook">
+          <i class="icon icon-facebook"></i>
+        </a>
+      </li>
+      <li>
+        <a class="twitter share-sns" target="_blank" href="https://twitter.com/intent/tweet?text=《javaee基础xml语言》 — null&url=http://yoursite.com/2018/05/19/javaweb-基础xml语言/&via=http://yoursite.com" data-title=" Twitter">
+          <i class="icon icon-twitter"></i>
+        </a>
+      </li>
+      <li>
+        <a class="google share-sns" target="_blank" href="https://plus.google.com/share?url=http://yoursite.com/2018/05/19/javaweb-基础xml语言/" data-title=" Google+">
+          <i class="icon icon-google-plus"></i>
+        </a>
+      </li>
+    </ul>
+ </div>
+
+
+<div class="page-modal wx-share" id="wxShare">
+    <a class="close" href="javascript:;"><i class="icon icon-close"></i></a>
+    <p>扫一扫，分享到微信</p>
+    <img src="//api.qrserver.com/v1/create-qr-code/?data=http://yoursite.com/2018/05/19/javaweb-基础xml语言/" alt="微信分享二维码">
+</div>
+
+
+
+
+    <script src="//cdn.bootcss.com/node-waves/0.7.4/waves.min.js"></script>
+<script>
+var BLOG = { ROOT: '/', SHARE: true, REWARD: true };
+
+
+</script>
+
+<script src="//unpkg.com/hexo-theme-material-indigo@latest/js/main.min.js"></script>
+
+
+<div class="search-panel" id="search-panel">
+    <ul class="search-result" id="search-result"></ul>
+</div>
+<template id="search-tpl">
+<li class="item">
+    <a href="{path}" class="waves-block waves-effect">
+        <div class="title ellipsis" title="{title}">{title}</div>
+        <div class="flex-row flex-middle">
+            <div class="tags ellipsis">
+                {tags}
+            </div>
+            <time class="flex-col time">{date}</time>
+        </div>
+    </a>
+</li>
+</template>
+
+<script src="//unpkg.com/hexo-theme-material-indigo@latest/js/search.min.js" async></script>
+
+
+
+
+
+
+<script async src="//dn-lbstatics.qbox.me/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+
+
+
+<script>
+(function() {
+    var OriginTitile = document.title, titleTime;
+    document.addEventListener('visibilitychange', function() {
+        if (document.hidden) {
+            document.title = '死鬼去哪里了！';
+            clearTimeout(titleTime);
+        } else {
+            document.title = '(つェ⊂)咦!又好了!';
+            titleTime = setTimeout(function() {
+                document.title = OriginTitile;
+            },2000);
+        }
+    });
+})();
+</script>
+
+
+
+</body>
+</html>

@@ -1,0 +1,622 @@
+<!DOCTYPE html>
+<html>
+<head>
+    
+
+    
+
+    
+
+
+
+    <meta charset="utf-8">
+    
+    
+    
+    <title>http | </title>
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    
+    <meta name="theme-color" content="#3F51B5">
+    
+    
+    <meta name="keywords" content="javaweb,http">
+    <meta name="description" content="http初识 超文本传输协议： 规定数据的格式 浏览器往服务器发送 —-请求response 服务器往浏览器发送—-响应  request 组成部分 请求行，请求体，请求头   请求行 请求信息的第一部分 格式： 请求方式  访问的资源 协议/版本  例如：Get /libary/1.html   http/1.1 请求方式： get和post：get会把参数放在url的后面  post不会。 g">
+<meta name="keywords" content="javaweb,http">
+<meta property="og:type" content="article">
+<meta property="og:title" content="http">
+<meta property="og:url" content="http://yoursite.com/2018/05/21/javaweb-http/index.html">
+<meta property="og:site_name">
+<meta property="og:description" content="http初识 超文本传输协议： 规定数据的格式 浏览器往服务器发送 —-请求response 服务器往浏览器发送—-响应  request 组成部分 请求行，请求体，请求头   请求行 请求信息的第一部分 格式： 请求方式  访问的资源 协议/版本  例如：Get /libary/1.html   http/1.1 请求方式： get和post：get会把参数放在url的后面  post不会。 g">
+<meta property="og:locale" content="zh-CN">
+<meta property="og:updated_time" content="2018-05-21T07:47:38.124Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="http">
+<meta name="twitter:description" content="http初识 超文本传输协议： 规定数据的格式 浏览器往服务器发送 —-请求response 服务器往浏览器发送—-响应  request 组成部分 请求行，请求体，请求头   请求行 请求信息的第一部分 格式： 请求方式  访问的资源 协议/版本  例如：Get /libary/1.html   http/1.1 请求方式： get和post：get会把参数放在url的后面  post不会。 g">
+    
+    <link rel="shortcut icon" href="/favicon.ico">
+    <link rel="stylesheet" href="//unpkg.com/hexo-theme-material-indigo@latest/css/style.css">
+    <script>window.lazyScripts=[]</script>
+
+    <!-- custom head -->
+    
+
+</head>
+
+<body>
+    <div id="loading" class="active"></div>
+
+    <aside id="menu" class="hide" >
+  <div class="inner flex-row-vertical">
+    <a href="javascript:;" class="header-icon waves-effect waves-circle waves-light" id="menu-off">
+        <i class="icon icon-lg icon-close"></i>
+    </a>
+    <div class="brand-wrap" style="background-image:url(/img/brand.jpg)">
+      <div class="brand">
+        <a href="/" class="avatar waves-effect waves-circle waves-light">
+          <img src="/img/avatar.jpg">
+        </a>
+        <hgroup class="introduce">
+          <h5 class="nickname">JiaZhiYuan</h5>
+          <a href="mailto:598424640@qq.com" title="598424640@qq.com" class="mail">598424640@qq.com</a>
+        </hgroup>
+      </div>
+    </div>
+    <div class="scroll-wrap flex-col">
+      <ul class="nav">
+        
+            <li class="waves-block waves-effect">
+              <a href="/"  >
+                <i class="icon icon-lg icon-home"></i>
+                主页
+              </a>
+            </li>
+        
+            <li class="waves-block waves-effect">
+              <a href="/archives"  >
+                <i class="icon icon-lg icon-archives"></i>
+                Archives
+              </a>
+            </li>
+        
+            <li class="waves-block waves-effect">
+              <a href="/tags"  >
+                <i class="icon icon-lg icon-tags"></i>
+                Tags
+              </a>
+            </li>
+        
+            <li class="waves-block waves-effect">
+              <a href="/categories"  >
+                <i class="icon icon-lg icon-th-list"></i>
+                Categories
+              </a>
+            </li>
+        
+            <li class="waves-block waves-effect">
+              <a href="https://github.com/jiazhiyuan1" target="_blank" >
+                <i class="icon icon-lg icon-github"></i>
+                Github
+              </a>
+            </li>
+        
+            <li class="waves-block waves-effect">
+              <a href="http://www.weibo.com/ysweb" target="_blank" >
+                <i class="icon icon-lg icon-weibo"></i>
+                Weibo
+              </a>
+            </li>
+        
+            <li class="waves-block waves-effect">
+              <a href="/custom"  >
+                <i class="icon icon-lg icon-link"></i>
+                测试
+              </a>
+            </li>
+        
+      </ul>
+    </div>
+  </div>
+</aside>
+
+    <main id="main">
+        <header class="top-header" id="header">
+    <div class="flex-row">
+        <a href="javascript:;" class="header-icon waves-effect waves-circle waves-light on" id="menu-toggle">
+          <i class="icon icon-lg icon-navicon"></i>
+        </a>
+        <div class="flex-col header-title ellipsis">http</div>
+        
+        <div class="search-wrap" id="search-wrap">
+            <a href="javascript:;" class="header-icon waves-effect waves-circle waves-light" id="back">
+                <i class="icon icon-lg icon-chevron-left"></i>
+            </a>
+            <input type="text" id="key" class="search-input" autocomplete="off" placeholder="输入感兴趣的关键字">
+            <a href="javascript:;" class="header-icon waves-effect waves-circle waves-light" id="search">
+                <i class="icon icon-lg icon-search"></i>
+            </a>
+        </div>
+        
+        
+        <a href="javascript:;" class="header-icon waves-effect waves-circle waves-light" id="menuShare">
+            <i class="icon icon-lg icon-share-alt"></i>
+        </a>
+        
+    </div>
+</header>
+<header class="content-header post-header">
+
+    <div class="container fade-scale">
+        <h1 class="title">http</h1>
+        <h5 class="subtitle">
+            
+                <time datetime="2018-05-21T06:39:58.000Z" itemprop="datePublished" class="page-time">
+  2018-05-21
+</time>
+
+
+	<ul class="article-category-list"><li class="article-category-list-item"><a class="article-category-list-link" href="/categories/javaweb/">javaweb</a></li></ul>
+
+            
+        </h5>
+    </div>
+
+    
+
+
+</header>
+
+
+<div class="container body-wrap">
+    
+    <aside class="post-widget">
+        <nav class="post-toc-wrap post-toc-shrink" id="post-toc">
+            <h4>TOC</h4>
+            <ol class="post-toc"><li class="post-toc-item post-toc-level-1"><a class="post-toc-link" href="#http初识"><span class="post-toc-number">1.</span> <span class="post-toc-text">http初识</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#request"><span class="post-toc-number">1.1.</span> <span class="post-toc-text">request</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#response"><span class="post-toc-number">1.2.</span> <span class="post-toc-text">response</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#Last-Modified-response，If-Modified-Since：request"><span class="post-toc-number">1.3.</span> <span class="post-toc-text">Last-Modified:response，If-Modified-Since：request</span></a></li></ol></li><li class="post-toc-item post-toc-level-1"><a class="post-toc-link" href="#servlet探索"><span class="post-toc-number">2.</span> <span class="post-toc-text">servlet探索</span></a></li><li class="post-toc-item post-toc-level-1"><a class="post-toc-link" href="#url-pattern的配置"><span class="post-toc-number">3.</span> <span class="post-toc-text">url-pattern的配置</span></a></li><li class="post-toc-item post-toc-level-1"><a class="post-toc-link" href="#路径的写法"><span class="post-toc-number">4.</span> <span class="post-toc-text">路径的写法</span></a></li><li class="post-toc-item post-toc-level-1"><a class="post-toc-link" href="#ServletConfig"><span class="post-toc-number">5.</span> <span class="post-toc-text">ServletConfig</span></a></li><li class="post-toc-item post-toc-level-1"><a class="post-toc-link" href="#ServletContext-理解"><span class="post-toc-number">6.</span> <span class="post-toc-text">ServletContext:理解</span></a></li></ol>
+        </nav>
+    </aside>
+
+
+<article id="post-javaweb-http"
+  class="post-article article-type-post fade" itemprop="blogPost">
+
+    <div class="post-card">
+        <h1 class="post-card-title">http</h1>
+        <div class="post-meta">
+            <time class="post-time" title="2018-05-21 14:39:58" datetime="2018-05-21T06:39:58.000Z"  itemprop="datePublished">2018-05-21</time>
+
+            
+	<ul class="article-category-list"><li class="article-category-list-item"><a class="article-category-list-link" href="/categories/javaweb/">javaweb</a></li></ul>
+
+
+
+            
+<span id="busuanzi_container_page_pv" title="文章总阅读量" style='display:none'>
+    <i class="icon icon-eye icon-pr"></i><span id="busuanzi_value_page_pv"></span>
+</span>
+
+
+        </div>
+        <div class="post-content" id="post-content" itemprop="postContent">
+            <h1 id="http初识"><a href="#http初识" class="headerlink" title="http初识"></a>http初识</h1><ul>
+<li>超文本传输协议： 规定数据的格式</li>
+<li>浏览器往服务器发送 —-请求response</li>
+<li>服务器往浏览器发送—-响应</li>
+</ul>
+<h2 id="request"><a href="#request" class="headerlink" title="request"></a>request</h2><ul>
+<li>组成部分<ul>
+<li>请求行，请求体，请求头</li>
+</ul>
+</li>
+<li>请求行<ul>
+<li>请求信息的第一部分</li>
+<li>格式： 请求方式  访问的资源 协议/版本  例如：Get /libary/1.html   http/1.1</li>
+<li>请求方式：<ul>
+<li>get和post：get会把参数放在url的后面  post不会。<ul>
+<li>get有参数大小限制，post没有限制</li>
+<li>get没有请求体，post有请求体，原因：post需要请求体存放传递的参数</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>请求头：<ul>
+<li>格式：key/value(value可以是多个值)</li>
+<li>常见的请求头：<ul>
+<li>Accept:text/html,image/bmp  –支持的数据类型  大类型/小类型 mine类型</li>
+<li>Accept-Charset: ISO-8859-1  –字符集</li>
+<li>Accept-Ecoding：gzip        –支持压缩</li>
+<li>Accept-Language:zh-cn       –语言环境</li>
+<li>Host：www.itcast.cn:80          – 访问主机</li>
+<li>if-Modified-Since：          – 缓存文件最后修改时间</li>
+<li>referer：来自哪个页面，防盗链</li>
+<li>user-Agent: Mozilla 4.0(compatible;MSIE 5.5;WIndows NT 5.0) </li>
+<li>Cookie</li>
+<li>connnection:Keep-Alive      –链接状态</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>掌握的头信息：<ul>
+<li>referer  来自哪个页面</li>
+<li>user-Agent 浏览器内核</li>
+<li>cookie </li>
+<li>if-modified-since  是否曾经修改</li>
+<li><h2 id="response"><a href="#response" class="headerlink" title="response"></a>response</h2></li>
+</ul>
+</li>
+<li>响应：<pre><code>- 组成部分：响应行 ，响应头，响应体
+</code></pre><ul>
+<li>响应行<ul>
+<li>格式：HTTP/1.1 200 OK  协议/版本  状态码 说明</li>
+<li>状态码：200 正常响应成功   302重定向  304读缓存 404用户资源不存在  500服务器内部异常</li>
+</ul>
+</li>
+<li>响应头 ：格式 key value<ul>
+<li>常见的头：<ul>
+<li>location：http：//www.it315.org/index.jsp –跳转方向和302一起使用</li>
+<li>Content-Encoding: gzip –数据压缩</li>
+<li>Content-Type：text/html,charset=GB2312 数据类型</li>
+<li>Last -Modified：</li>
+<li>refresh： 1；url=http：//  –定时刷新</li>
+<li>Set-Cookie:SS=Q0=5Lb_nQ; path=/search</li>
+<li>Expires: -1                    –缓存</li>
+<li>Cache-Control: no-cache              –缓存</li>
+<li>Pragma: no-cache                   –缓存</li>
+<li>Connection: Keep-Alive               –连接<h2 id="Last-Modified-response，If-Modified-Since：request"><a href="#Last-Modified-response，If-Modified-Since：request" class="headerlink" title="Last-Modified:response，If-Modified-Since：request"></a>Last-Modified:response，If-Modified-Since：request</h2>以前没有关注Http头的Last-Modified 与If-Modified-Since这个信息，今天在看servlet源码时看到这个标识，就认真学习了一下，理解了一下这两个东西的用途。 Last-Modified 与If-Modified-Since都是用来记录页面的最后修改时间。当客户端访问页面时，服务器会将页面最后修改时间通过 Last-Modified 标识由服务器发往客户端，客户端记录修改时间，再次请求本地存在的cache页面时，客户端会通过 If-Modified-Since 头将先前服务器端发过来的最后修改时间戳发送回去，服务器端通过这个时间戳判断客户端的页面是否是最新的，如果不是最新的，则返回新的内容，如果是最新的，则 返回 304 告诉客户端其本地 cache 的页面是最新的，于是客户端就可以直接从本地加载页面了，这样在网络上传输的数据就会大大减少，同时也减轻了服务器的负担。<h1 id="servlet探索"><a href="#servlet探索" class="headerlink" title="servlet探索"></a>servlet探索</h1></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>void init（servletConfig config）:初始化<ul>
+<li>初始化方法：服务器</li>
+<li>执行次数：一次</li>
+<li>执行时机：默认第一次访问的时候</li>
+</ul>
+</li>
+<li>void service（servletRequest request，servletresponse response）<ul>
+<li>服务</li>
+<li>执行者：服务器</li>
+<li>执行次数： 请求一次执行一次</li>
+<li>执行时机：请求来的时候</li>
+</ul>
+</li>
+<li>void destroy（）：销毁<ul>
+<li>执行时机：当servlet被移除或者服务器正常关闭的时候</li>
+</ul>
+</li>
+<li>servlet是单实例多线程<ul>
+<li>默认第一次访问的时候，服务器创建servlet，并调用init实现初始化操作，并调用一次sercice方法，每当请求来的时候，服务器创建一个线程，调用service方法来执行自己的业务逻辑。</li>
+<li>当servlet被移除或者服务器正常关闭的时候，服务器调用service方法执行自己的业务逻辑。<h1 id="url-pattern的配置"><a href="#url-pattern的配置" class="headerlink" title="url-pattern的配置"></a>url-pattern的配置</h1><h1 id="路径的写法"><a href="#路径的写法" class="headerlink" title="路径的写法"></a>路径的写法</h1></li>
+</ul>
+</li>
+<li>相对路径：<ul>
+<li>当前路径： ./或者什么都不写</li>
+<li>上一级路径: ../ </li>
+</ul>
+</li>
+<li>绝对路径：(我们用)<ul>
+<li>带主机和协议的路径：<br>  <a href="http://www.itheima.com/xxxx" target="_blank" rel="noopener">http://www.itheima.com/xxxx</a><br>  <a href="http://localhost:80/day09/hello" target="_blank" rel="noopener">http://localhost:80/day09/hello</a></li>
+<li>不带主机和协议的路径；<br>  /day09/hello<h1 id="ServletConfig"><a href="#ServletConfig" class="headerlink" title="ServletConfig"></a>ServletConfig</h1></li>
+</ul>
+</li>
+<li>servlet的配置对象<ul>
+<li>作用：<ul>
+<li>1.获取当前servlet的名字</li>
+<li>2.获取当前servlet的初始化参数</li>
+<li>3.获取全局管理者</li>
+</ul>
+</li>
+<li>方法：<ul>
+<li>String getServletName(){}</li>
+<li>String getInitParameter(){}</li>
+<li>Enumeration getInitParameterNames() :获取所有的参数名称</li>
+<li>初始化参数是放在 web.xml文件<br>  servlet标签下子标签 init-param<ul>
+<li>★getServletContext():获取全局管理者<br>servletconfig是由服务器创建的,在创建servlet的同时也创建了它,通过servlet的init(ServletConfig config)将config对象<br>传递给servlet,由servlet的getServletConfig方法获取<h1 id="ServletContext-理解"><a href="#ServletContext-理解" class="headerlink" title="ServletContext:理解"></a>ServletContext:理解</h1></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>上下文</li>
+<li>一个项目的引用，代表当前项目。 </li>
+</ul>
+
+        </div>
+
+        <blockquote class="post-copyright">
+    
+    <div class="content">
+        
+<span class="post-time">
+    最后更新时间：<time datetime="2018-05-21T07:47:38.124Z" itemprop="dateUpdated">2018-05-21 15:47:38</time>
+</span><br>
+
+
+        
+        这里可以写作者留言，标签和 hexo 中所有变量及辅助函数等均可调用，示例：<a href="/2018/05/21/javaweb-http/" target="_blank" rel="external">http://yoursite.com/2018/05/21/javaweb-http/</a>
+        
+    </div>
+    
+    <footer>
+        <a href="http://yoursite.com">
+            <img src="/img/avatar.jpg" alt="JiaZhiYuan">
+            JiaZhiYuan
+        </a>
+    </footer>
+</blockquote>
+
+        
+<div class="page-reward">
+    <a id="rewardBtn" href="javascript:;" class="page-reward-btn waves-effect waves-circle waves-light">赏</a>
+</div>
+
+
+
+        <div class="post-footer">
+            
+	<ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/http/">http</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/javaweb/">javaweb</a></li></ul>
+
+
+            
+<div class="page-share-wrap">
+    
+
+<div class="page-share" id="pageShare">
+    <ul class="reset share-icons">
+      <li>
+        <a class="weibo share-sns" target="_blank" href="http://service.weibo.com/share/share.php?url=http://yoursite.com/2018/05/21/javaweb-http/&title=《http》 — null&pic=http://yoursite.com/img/avatar.jpg" data-title="微博">
+          <i class="icon icon-weibo"></i>
+        </a>
+      </li>
+      <li>
+        <a class="weixin share-sns wxFab" href="javascript:;" data-title="微信">
+          <i class="icon icon-weixin"></i>
+        </a>
+      </li>
+      <li>
+        <a class="qq share-sns" target="_blank" href="http://connect.qq.com/widget/shareqq/index.html?url=http://yoursite.com/2018/05/21/javaweb-http/&title=《http》 — null&source=Welcome to LaoJia's blog" data-title=" QQ">
+          <i class="icon icon-qq"></i>
+        </a>
+      </li>
+      <li>
+        <a class="facebook share-sns" target="_blank" href="https://www.facebook.com/sharer/sharer.php?u=http://yoursite.com/2018/05/21/javaweb-http/" data-title=" Facebook">
+          <i class="icon icon-facebook"></i>
+        </a>
+      </li>
+      <li>
+        <a class="twitter share-sns" target="_blank" href="https://twitter.com/intent/tweet?text=《http》 — null&url=http://yoursite.com/2018/05/21/javaweb-http/&via=http://yoursite.com" data-title=" Twitter">
+          <i class="icon icon-twitter"></i>
+        </a>
+      </li>
+      <li>
+        <a class="google share-sns" target="_blank" href="https://plus.google.com/share?url=http://yoursite.com/2018/05/21/javaweb-http/" data-title=" Google+">
+          <i class="icon icon-google-plus"></i>
+        </a>
+      </li>
+    </ul>
+ </div>
+
+
+
+    <a href="javascript:;" id="shareFab" class="page-share-fab waves-effect waves-circle">
+        <i class="icon icon-share-alt icon-lg"></i>
+    </a>
+</div>
+
+
+
+        </div>
+    </div>
+
+    
+<nav class="post-nav flex-row flex-justify-between">
+  
+    <div class="waves-block waves-effect prev">
+      <a href="/2018/05/23/javaweb-response和request/" id="post-prev" class="post-nav-link">
+        <div class="tips"><i class="icon icon-angle-left icon-lg icon-pr"></i> Prev</div>
+        <h4 class="title">response和request </h4>
+      </a>
+    </div>
+  
+
+  
+    <div class="waves-block waves-effect next">
+      <a href="/2018/05/21/初识servlet/" id="post-next" class="post-nav-link">
+        <div class="tips">Next <i class="icon icon-angle-right icon-lg icon-pl"></i></div>
+        <h4 class="title">初识servlet</h4>
+      </a>
+    </div>
+  
+</nav>
+
+
+
+    
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</article>
+
+<div id="reward" class="page-modal reward-lay">
+    <a class="close" href="javascript:;"><i class="icon icon-close"></i></a>
+    <h3 class="reward-title">
+        <i class="icon icon-quote-left"></i>
+        扎心了,老铁！
+        <i class="icon icon-quote-right"></i>
+    </h3>
+    <div class="reward-content">
+        
+        <div class="reward-code">
+            <img id="rewardCode" src="/img/wechat.jpg" alt="打赏二维码">
+        </div>
+        
+        <label class="reward-toggle">
+            <input id="rewardToggle" type="checkbox" class="reward-toggle-check"
+                data-wechat="/img/wechat.jpg" data-alipay="/img/alipay.jpg">
+            <div class="reward-toggle-ctrol">
+                <span class="reward-toggle-item wechat">微信</span>
+                <span class="reward-toggle-label"></span>
+                <span class="reward-toggle-item alipay">支付宝</span>
+            </div>
+        </label>
+        
+    </div>
+</div>
+
+
+
+</div>
+
+        <footer class="footer">
+    <div class="top">
+        
+<p>
+    <span id="busuanzi_container_site_uv" style='display:none'>
+        站点总访客数：<span id="busuanzi_value_site_uv"></span>
+    </span>
+    <span id="busuanzi_container_site_pv" style='display:none'>
+        站点总访问量：<span id="busuanzi_value_site_pv"></span>
+    </span>
+</p>
+
+
+        <p>
+            
+            <span>博客内容遵循 <a rel="license" href="https://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh">知识共享 署名 - 非商业性 - 相同方式共享 4.0 国际协议</a></span>
+        </p>
+    </div>
+    <div class="bottom">
+        <p><span>JiaZhiYuan &copy; 2015 - 2018</span>
+            <span>
+                
+                Power by <a href="http://hexo.io/" target="_blank">Hexo</a> Theme <a href="https://github.com/yscoder/hexo-theme-indigo" target="_blank">indigo</a>
+            </span>
+        </p>
+    </div>
+</footer>
+
+    </main>
+    <div class="mask" id="mask"></div>
+<a href="javascript:;" id="gotop" class="waves-effect waves-circle waves-light"><span class="icon icon-lg icon-chevron-up"></span></a>
+
+
+
+<div class="global-share" id="globalShare">
+    <ul class="reset share-icons">
+      <li>
+        <a class="weibo share-sns" target="_blank" href="http://service.weibo.com/share/share.php?url=http://yoursite.com/2018/05/21/javaweb-http/&title=《http》 — null&pic=http://yoursite.com/img/avatar.jpg" data-title="微博">
+          <i class="icon icon-weibo"></i>
+        </a>
+      </li>
+      <li>
+        <a class="weixin share-sns wxFab" href="javascript:;" data-title="微信">
+          <i class="icon icon-weixin"></i>
+        </a>
+      </li>
+      <li>
+        <a class="qq share-sns" target="_blank" href="http://connect.qq.com/widget/shareqq/index.html?url=http://yoursite.com/2018/05/21/javaweb-http/&title=《http》 — null&source=Welcome to LaoJia's blog" data-title=" QQ">
+          <i class="icon icon-qq"></i>
+        </a>
+      </li>
+      <li>
+        <a class="facebook share-sns" target="_blank" href="https://www.facebook.com/sharer/sharer.php?u=http://yoursite.com/2018/05/21/javaweb-http/" data-title=" Facebook">
+          <i class="icon icon-facebook"></i>
+        </a>
+      </li>
+      <li>
+        <a class="twitter share-sns" target="_blank" href="https://twitter.com/intent/tweet?text=《http》 — null&url=http://yoursite.com/2018/05/21/javaweb-http/&via=http://yoursite.com" data-title=" Twitter">
+          <i class="icon icon-twitter"></i>
+        </a>
+      </li>
+      <li>
+        <a class="google share-sns" target="_blank" href="https://plus.google.com/share?url=http://yoursite.com/2018/05/21/javaweb-http/" data-title=" Google+">
+          <i class="icon icon-google-plus"></i>
+        </a>
+      </li>
+    </ul>
+ </div>
+
+
+<div class="page-modal wx-share" id="wxShare">
+    <a class="close" href="javascript:;"><i class="icon icon-close"></i></a>
+    <p>扫一扫，分享到微信</p>
+    <img src="//api.qrserver.com/v1/create-qr-code/?data=http://yoursite.com/2018/05/21/javaweb-http/" alt="微信分享二维码">
+</div>
+
+
+
+
+    <script src="//cdn.bootcss.com/node-waves/0.7.4/waves.min.js"></script>
+<script>
+var BLOG = { ROOT: '/', SHARE: true, REWARD: true };
+
+
+</script>
+
+<script src="//unpkg.com/hexo-theme-material-indigo@latest/js/main.min.js"></script>
+
+
+<div class="search-panel" id="search-panel">
+    <ul class="search-result" id="search-result"></ul>
+</div>
+<template id="search-tpl">
+<li class="item">
+    <a href="{path}" class="waves-block waves-effect">
+        <div class="title ellipsis" title="{title}">{title}</div>
+        <div class="flex-row flex-middle">
+            <div class="tags ellipsis">
+                {tags}
+            </div>
+            <time class="flex-col time">{date}</time>
+        </div>
+    </a>
+</li>
+</template>
+
+<script src="//unpkg.com/hexo-theme-material-indigo@latest/js/search.min.js" async></script>
+
+
+
+
+
+
+<script async src="//dn-lbstatics.qbox.me/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+
+
+
+<script>
+(function() {
+    var OriginTitile = document.title, titleTime;
+    document.addEventListener('visibilitychange', function() {
+        if (document.hidden) {
+            document.title = '死鬼去哪里了！';
+            clearTimeout(titleTime);
+        } else {
+            document.title = '(つェ⊂)咦!又好了!';
+            titleTime = setTimeout(function() {
+                document.title = OriginTitile;
+            },2000);
+        }
+    });
+})();
+</script>
+
+
+
+</body>
+</html>
